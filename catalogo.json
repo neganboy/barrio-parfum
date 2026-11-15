@@ -1,0 +1,512 @@
+{
+  "whatsapp": "4777665438",
+  "paymentMethods": [
+    "Transferencia",
+    "Meses sin intereses"
+  ],
+  "perfumes": [
+    {
+      "id": "le-male-elixir",
+      "brand": "Jean Paul Gaultier",
+      "name": "Le Male Elixir",
+      "type": "Dulce",
+      "gender": "Para hombre",
+      "sections": [
+        "temporada",
+        "mas-vendidos",
+        "hombre"
+      ],
+      "badge": "Más vendido",
+      "desc": "La versión más intensa y sensual de Le Male. Es un perfume dulce, cálido y con mucha presencia: huele elegante y adictivo, de esos que dejan estela y reciben cumplidos toda la noche.",
+      "uso": "Ideal para la noche, citas y fiestas. En frío luce todavía más.",
+      "salida": "Lavanda y menta",
+      "corazon": "Vainilla y benjuí",
+      "fondo": "Miel, haba tonka y tabaco",
+      "photo": "fotos\/le-male-elixir.jpg",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "stronger",
+      "brand": "Giorgio Armani",
+      "name": "Stronger With You Intensely",
+      "type": "Dulce",
+      "gender": "Para hombre",
+      "sections": [
+        "temporada",
+        "hombre"
+      ],
+      "badge": "Temporada",
+      "desc": "Dulce, especiado y muy masculino. Combina un toque tostado y acaramelado con vainilla cálida: es un perfume de abrazo, potente y con una duración altísima en piel y ropa.",
+      "uso": "Perfecto para la noche, citas y clima fresco o frío.",
+      "salida": "Pimienta rosa, bayas de enebro y violeta",
+      "corazon": "Toffee, canela, lavanda y salvia",
+      "fondo": "Vainilla, haba tonka, castaña y ante",
+      "photo": "fotos\/stronger.jpg",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "id": "khamrah",
+      "brand": "Lattafa",
+      "name": "Khamrah",
+      "type": "Dulce",
+      "gender": "Unisex",
+      "sections": [
+        "temporada",
+        "mas-vendidos",
+        "hombre",
+        "arabes"
+      ],
+      "badge": "Más vendido",
+      "desc": "Un perfume árabe gourmand, dulce y especiado, famoso por oler a postre fino con dátiles y praliné. Es cálido, intenso y con una proyección enorme: huele mucho más caro de lo que cuesta.",
+      "uso": "Ideal para la noche y clima frío. Con dos o tres atomizaciones basta.",
+      "salida": "Canela, nuez moscada y bergamota",
+      "corazon": "Dátiles, praliné, nardo y mahonial",
+      "fondo": "Vainilla, haba tonka, benjuí, mirra y ámbar",
+      "photo": "fotos\/khamrah.jpg",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "id": "club-de-nuit",
+      "brand": "Armaf",
+      "name": "Club de Nuit Intense Man",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "arabes"
+      ],
+      "badge": "Árabe",
+      "desc": "El árabe más famoso de todos: potente, ahumado y con una piña vibrante que recuerda a los perfumes de lujo más caros. Proyecta muchísimo, dura todo el día y es el más pedido para hombre en México.",
+      "uso": "Ideal para la noche, fiestas y cuando quieres que te noten. No abuses de las atomizaciones: es muy fuerte.",
+      "salida": "Limón, piña, bergamota, grosella negra y manzana",
+      "corazon": "Abedul, jazmín y rosa",
+      "fondo": "Almizcle, ámbar gris, pachulí y vainilla",
+      "photo": "fotos\/club-de-nuit.jpg",
+      "visible": true,
+      "order": 3
+    },
+    {
+      "id": "hawas",
+      "brand": "Rasasi",
+      "name": "Hawas",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "arabes"
+      ],
+      "badge": "Árabe",
+      "desc": "Acuático, dulce y magnético: el árabe fresco más vendido. Huele a agua con frutas y un toque de canela, limpio pero con mucha presencia y una estela que deja cumplidos por todos lados.",
+      "uso": "Perfecto para el día, el calor, la oficina y salidas. Muy versátil y agradable para todos.",
+      "salida": "Manzana, bergamota, limón y canela",
+      "corazon": "Notas acuosas, ciruela, flor de azahar y cardamomo",
+      "fondo": "Ámbar gris, almizcle, pachulí y madera a la deriva",
+      "photo": "fotos\/hawas.jpg",
+      "visible": true,
+      "order": 4
+    },
+    {
+      "id": "asad",
+      "brand": "Lattafa",
+      "name": "Asad",
+      "type": "Dulce",
+      "gender": "Para hombre",
+      "sections": [
+        "arabes"
+      ],
+      "badge": "Árabe",
+      "desc": "Especiado, elegante y con carácter: el Asad de frasco negro y dorado es de los árabes más buscados por su aroma intenso tipo perfume de diseñador, con vainilla y ámbar que duran horas y horas.",
+      "uso": "Ideal para la noche, eventos y clima fresco. Huele formal y masculino.",
+      "salida": "Piña, pimienta negra y tabaco",
+      "corazon": "Pachulí, café e iris",
+      "fondo": "Vainilla, ámbar, maderas secas, benjuí y ládano",
+      "photo": "fotos\/asad.jpg",
+      "visible": true,
+      "order": 5
+    },
+    {
+      "id": "odyssey-mandarin",
+      "brand": "Armaf",
+      "name": "Odyssey Mandarin Sky",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "arabes"
+      ],
+      "badge": "Árabe",
+      "desc": "La edición limitada de frasco azul con tapa naranja que se volvió viral. Mandarina jugosa con un fondo dulce de caramelo: fresco al inicio y adictivo al secar, juvenil y muy diferente a todo.",
+      "uso": "Perfecto para el día, la escuela, el gym y el calor. Un favorito de los jóvenes.",
+      "salida": "Mandarina, naranja, azafrán y salvia",
+      "corazon": "Caramelo, haba tonka y caléndula",
+      "fondo": "Ambroxan, vetiver y cedro",
+      "photo": "fotos\/odyssey-mandarin.jpg",
+      "visible": true,
+      "order": 6
+    },
+    {
+      "id": "fakhar",
+      "brand": "Lattafa",
+      "name": "Fakhar Black",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "arabes"
+      ],
+      "badge": "Árabe",
+      "desc": "Limpio, fresco y elegante, en su icónico frasco redondo negro con plata. Es el árabe ideal para diario: huele a recién bañado con un toque fino y masculino, sin ser pesado ni empalagoso.",
+      "uso": "Para todos los días, la oficina, la escuela y el calor. El más fácil de regalar.",
+      "salida": "Manzana, bergamota y jengibre",
+      "corazon": "Lavanda, geranio, bayas de enebro y salvia",
+      "fondo": "Haba tonka, cedro, pachulí y vetiver",
+      "photo": "fotos\/fakhar.jpg",
+      "visible": true,
+      "order": 7
+    },
+    {
+      "id": "yara",
+      "brand": "Lattafa",
+      "name": "Yaraax",
+      "type": "Dulce",
+      "gender": "Para mujer",
+      "sections": [
+        "arabes"
+      ],
+      "badge": "Árabe",
+      "desc": "El árabe de mujer más vendido: su frasco rosa es inconfundible y su aroma es dulce, cremoso y tropical, como un postre suave con vainilla. Femenino, coqueto y con una duración que sorprende por su precio.",
+      "uso": "Ideal para el día y la noche, salidas y citas. Dulce sin empalagar.",
+      "salida": "Orquídea, heliotropo y mandarina",
+      "corazon": "Acorde gourmand y frutas tropicales",
+      "fondo": "Vainilla, almizcle y sándalo",
+      "photo": "fotos\/yara.jpg",
+      "visible": true,
+      "order": 8
+    },
+    {
+      "id": "nueve-pm",
+      "brand": "Afnan",
+      "name": "9PM",
+      "type": "Dulce",
+      "gender": "Para hombre",
+      "sections": [
+        "arabes"
+      ],
+      "badge": "Árabe",
+      "desc": "El perfume de fiesta por excelencia: dulce, frutal y con una manzana con canela que se vuelve vainilla cálida. Es de los árabes que más cumplidos reciben en el antro y su proyección es enorme.",
+      "uso": "Hecho para la noche, el antro y las fiestas, como su nombre lo dice: desde las 9 p.m.",
+      "salida": "Manzana, canela, lavanda silvestre y bergamota",
+      "corazon": "Flor de azahar y lirio de los valles (muguete)",
+      "fondo": "Vainilla, haba tonka, ámbar y pachulí",
+      "photo": "fotos\/nueve-pm.jpg",
+      "visible": true,
+      "order": 9
+    },
+    {
+      "id": "black-opium",
+      "brand": "Yves Saint Laurent",
+      "name": "Black Opium",
+      "type": "Dulce",
+      "gender": "Para mujer",
+      "sections": [
+        "temporada",
+        "mas-comerciales",
+        "mas-vendidos",
+        "mujer"
+      ],
+      "badge": "Más vendido",
+      "desc": "El perfume de café y vainilla más famoso. Es dulce, sexy y adictivo, con un toque de café que le da energía y una vainilla cremosa que se queda horas en la piel.",
+      "uso": "Perfecto para la noche, salidas y citas. Un clásico que nunca falla.",
+      "salida": "Pera, pimienta rosa y flor de azahar",
+      "corazon": "Café y jazmín",
+      "fondo": "Vainilla, pachulí y cedro",
+      "photo": "fotos\/black-opium.jpg",
+      "visible": true,
+      "order": 10
+    },
+    {
+      "id": "born-in-roma",
+      "brand": "Valentino",
+      "name": "Born in Roma Uomo",
+      "type": "Dulce",
+      "gender": "Para hombre",
+      "sections": [
+        "temporada",
+        "novedades",
+        "buen-fin"
+      ],
+      "badge": "Oferta Buen Fin",
+      "desc": "Moderno y elegante, con un arranque mineral y fresco que poco a poco se vuelve amaderado y masculino. Es versátil: se siente fino sin ser pesado y proyecta muy bien.",
+      "uso": "Sirve de día y de noche, para oficina, salidas y eventos.",
+      "salida": "Notas minerales, hoja de violeta y sal",
+      "corazon": "Jengibre y salvia",
+      "fondo": "Vetiver y notas amaderadas",
+      "photo": "fotos\/born-in-roma.jpg",
+      "visible": true,
+      "order": 11
+    },
+    {
+      "id": "sauvage",
+      "brand": "Dior",
+      "name": "Sauvage",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "temporada",
+        "mas-comerciales",
+        "mas-vendidos",
+        "hombre"
+      ],
+      "badge": "Más vendido",
+      "desc": "El perfume masculino más vendido del mundo. Fresco, especiado y con mucha fuerza: abre con bergamota vibrante y se asienta en un fondo limpio y masculino que dura todo el día.",
+      "uso": "Para todos los días y cualquier ocasión. El favorito para regalo.",
+      "salida": "Bergamota de Calabria y pimienta",
+      "corazon": "Pimienta de Sichuán, lavanda, geranio y pachulí",
+      "fondo": "Cedro, ládano y ambroxan",
+      "photo": "fotos\/sauvage.jpg",
+      "visible": true,
+      "order": 12
+    },
+    {
+      "id": "most-wanted",
+      "brand": "Azzaro",
+      "name": "The Most Wanted",
+      "type": "Dulce",
+      "gender": "Para hombre",
+      "sections": [
+        "novedades",
+        "buen-fin",
+        "hombre"
+      ],
+      "badge": "Oferta Buen Fin",
+      "desc": "Dulce, especiado y con actitud. El jengibre rojo le da un arranque vibrante y el toffee del fondo lo vuelve adictivo y muy atractivo, pensado para destacar en la noche.",
+      "uso": "Ideal para fiestas, antro y citas. Proyecta fuerte las primeras horas.",
+      "salida": "Jengibre rojo",
+      "corazon": "Notas amaderadas",
+      "fondo": "Toffee (caramelo tostado)",
+      "photo": "fotos\/most-wanted.jpg",
+      "visible": true,
+      "order": 13
+    },
+    {
+      "id": "libre",
+      "brand": "Yves Saint Laurent",
+      "name": "Libre",
+      "type": "Fresco",
+      "gender": "Para mujer",
+      "sections": [
+        "novedades",
+        "mujer"
+      ],
+      "badge": "Novedad",
+      "desc": "Elegante y con carácter: mezcla la lavanda, típica de perfumes de hombre, con la flor de azahar y una vainilla suave. Huele limpia, fina y segura, sin ser dulce de más.",
+      "uso": "Perfecto para el día, la oficina y eventos. Muy versátil.",
+      "salida": "Lavanda, mandarina, grosella negra y petit grain",
+      "corazon": "Lavanda, flor de azahar y jazmín",
+      "fondo": "Vainilla de Madagascar, almizcle, cedro y ámbar gris",
+      "photo": "fotos\/libre.jpg",
+      "visible": true,
+      "order": 14
+    },
+    {
+      "id": "bright-crystal",
+      "brand": "Versace",
+      "name": "Bright Crystal",
+      "type": "Fresco",
+      "gender": "Para mujer",
+      "sections": [
+        "novedades",
+        "mujer"
+      ],
+      "badge": "Novedad",
+      "desc": "Fresco, floral y luminoso, como agua con flores. Es un perfume ligero y femenino, de los que huelen a recién bañada: limpio, delicado y muy agradable para el día a día.",
+      "uso": "Ideal para el día, el calor, la escuela y la oficina.",
+      "salida": "Yuzu, granada y notas acuosas heladas",
+      "corazon": "Peonía, magnolia y flor de loto",
+      "fondo": "Almizcle, caoba y ámbar",
+      "photo": "fotos\/bright-crystal.jpg",
+      "visible": true,
+      "order": 15
+    },
+    {
+      "id": "one-million",
+      "brand": "Paco Rabanne",
+      "name": "1 Million",
+      "type": "Dulce",
+      "gender": "Para hombre",
+      "sections": [
+        "mas-comerciales",
+        "mas-vendidos",
+        "hombre"
+      ],
+      "badge": "Más vendido",
+      "desc": "Un ícono: dulce, especiado y llamativo, con canela y un fondo de cuero que huele a lujo. Es de los perfumes que más cumplidos reciben y su frasco dorado es inconfundible.",
+      "uso": "Ideal para la noche, fiestas y salidas. Proyección muy fuerte.",
+      "salida": "Pomelo, menta y mandarina roja",
+      "corazon": "Rosa, canela y especias",
+      "fondo": "Cuero, notas amaderadas, ámbar y pachulí",
+      "photo": "fotos\/one-million.jpg",
+      "visible": true,
+      "order": 16
+    },
+    {
+      "id": "bleu",
+      "brand": "Chanel",
+      "name": "Bleu de Chanel",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "buen-fin",
+        "hombre"
+      ],
+      "badge": "Oferta Buen Fin",
+      "desc": "Elegancia pura. Amaderado, limpio y sofisticado, con cítricos al inicio y un fondo de maderas finas. Es el perfume de quien quiere oler bien vestido, sin exagerar.",
+      "uso": "Para oficina, eventos y uso diario. El más elegante de la lista.",
+      "salida": "Cítricos, menta, pomelo y pimienta rosa",
+      "corazon": "Jengibre, jazmín, nuez moscada y melón",
+      "fondo": "Incienso, vetiver, cedro, sándalo y pachulí",
+      "photo": "fotos\/bleu.jpg",
+      "visible": true,
+      "order": 17
+    },
+    {
+      "id": "acqua-di-gio",
+      "brand": "Giorgio Armani",
+      "name": "Acqua di Giò",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "mas-comerciales",
+        "hombre"
+      ],
+      "badge": "",
+      "desc": "El clásico perfume marino: huele a mar, cítricos y limpieza. Es ligero, refrescante y atemporal, de los más queridos para el calor y para regalar sin riesgo de fallar.",
+      "uso": "Perfecto para el día, el calor, la playa y la oficina.",
+      "salida": "Bergamota, nerolí, mandarina verde y notas marinas",
+      "corazon": "Jazmín, romero y caqui",
+      "fondo": "Pachulí, cedro, almizcle blanco y ámbar",
+      "photo": "fotos\/acqua-di-gio.jpg",
+      "visible": true,
+      "order": 18
+    },
+    {
+      "id": "eros",
+      "brand": "Versace",
+      "name": "Eros",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "buen-fin",
+        "hombre"
+      ],
+      "badge": "Oferta Buen Fin",
+      "desc": "Fresco pero con dulzor: abre con menta y manzana verde muy vibrantes y se vuelve cremoso con la haba tonka. Es juvenil, potente y muy atractivo, un favorito de siempre.",
+      "uso": "Sirve de día y de noche. Muy bueno para salidas y fiestas.",
+      "salida": "Menta, manzana verde y limón",
+      "corazon": "Haba tonka, geranio y ambroxan",
+      "fondo": "Vainilla de Madagascar, vetiver, musgo de roble y cedro",
+      "photo": "fotos\/eros.jpg",
+      "visible": true,
+      "order": 19
+    },
+    {
+      "id": "invictus",
+      "brand": "Paco Rabanne",
+      "name": "Invictus",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "hombre"
+      ],
+      "badge": "",
+      "desc": "Acuático, fresco y deportivo, con un fondo dulce que lo hace muy agradable. Su frasco en forma de trofeo lo dice todo: es un perfume ganador, juvenil y de uso diario.",
+      "uso": "Ideal para el día, el gym, la escuela y el calor.",
+      "salida": "Toronja, notas marinas y mandarina",
+      "corazon": "Hoja de laurel y jazmín",
+      "fondo": "Madera de guayaco, musgo de roble, pachulí y ámbar gris",
+      "photo": "fotos\/invictus.jpg",
+      "visible": true,
+      "order": 20
+    },
+    {
+      "id": "boss-bottled",
+      "brand": "Hugo Boss",
+      "name": "Boss Bottled",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "hombre"
+      ],
+      "badge": "",
+      "desc": "El clásico de oficina: manzana y canela sobre maderas suaves. Huele limpio, profesional y agradable para todo el mundo, sin ser invasivo. Un básico que nunca pasa de moda.",
+      "uso": "Perfecto para el trabajo, la escuela y el día a día.",
+      "salida": "Manzana, ciruela, bergamota, limón y geranio",
+      "corazon": "Canela, caoba y clavel",
+      "fondo": "Vainilla, sándalo, cedro, vetiver y olivo",
+      "photo": "fotos\/boss-bottled.jpg",
+      "visible": true,
+      "order": 21
+    },
+    {
+      "id": "good-girl",
+      "brand": "Carolina Herrera",
+      "name": "Good Girl",
+      "type": "Dulce",
+      "gender": "Para mujer",
+      "sections": [
+        "mas-comerciales",
+        "mas-vendidos",
+        "mujer"
+      ],
+      "badge": "Más vendido",
+      "desc": "Famoso por su frasco de zapatilla de tacón. Es dulce, floral y con mucha personalidad: el cacao y la haba tonka le dan un fondo cremoso y sexy que dura horas.",
+      "uso": "Ideal para la noche, eventos y cuando quieres destacar.",
+      "salida": "Almendra, café, bergamota y limón",
+      "corazon": "Jazmín sambac, nardo, rosa y flor de azahar",
+      "fondo": "Haba tonka, cacao, vainilla, praliné, canela y pachulí",
+      "photo": "fotos\/good-girl.jpg",
+      "visible": true,
+      "order": 22
+    },
+    {
+      "id": "la-vie-est-belle",
+      "brand": "Lancôme",
+      "name": "La Vie Est Belle",
+      "type": "Dulce",
+      "gender": "Para mujer",
+      "sections": [
+        "mas-comerciales",
+        "buen-fin",
+        "mujer"
+      ],
+      "badge": "Oferta Buen Fin",
+      "desc": "Dulce, elegante y luminoso. El iris le da un toque fino, como de maquillaje de lujo, y el praliné lo vuelve cálido y adictivo. Es de los perfumes de mujer más queridos y regalados.",
+      "uso": "Para el día y la noche. Perfecto para regalo.",
+      "salida": "Grosella negra y pera",
+      "corazon": "Iris, jazmín y flor de azahar",
+      "fondo": "Praliné, vainilla, pachulí y haba tonka",
+      "photo": "fotos\/la-vie-est-belle.jpg",
+      "visible": true,
+      "order": 23
+    },
+    {
+      "id": "light-blue",
+      "brand": "Dolce & Gabbana",
+      "name": "Light Blue",
+      "type": "Fresco",
+      "gender": "Para mujer",
+      "sections": [
+        "buen-fin",
+        "mujer"
+      ],
+      "badge": "Oferta Buen Fin",
+      "desc": "El perfume del verano mediterráneo: limón siciliano y manzana crujiente sobre un fondo limpio de cedro. Es fresco, chispeante y alegre, como una limonada junto al mar.",
+      "uso": "Ideal para el calor, el día y vacaciones. Muy ligero y agradable.",
+      "salida": "Limón siciliano, manzana, cedro y campanilla",
+      "corazon": "Bambú, jazmín y rosa blanca",
+      "fondo": "Cedro, almizcle y ámbar",
+      "photo": "fotos\/light-blue.jpg",
+      "visible": true,
+      "order": 24
+    }
+  ]
+}
