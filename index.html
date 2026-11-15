@@ -1545,6 +1545,151 @@
             if (e.key === "Enter" || e.key === " ") { e.preventDefault(); abrir(); }
           });
         });
+
+        // ---------- Catálogo desde catalogo.json (lo que sube la app admin) ----------
+        // window.__BP_applyCatalog(data) reconstruye las secciones con los datos
+        // del JSON y actualiza la ficha. Si el JSON no carga, no se llama y la
+        // página queda con su catálogo fijo (respaldo).
+        window.__BP_applyCatalog = function (catalog) {
+          if (!catalog || !catalog.perfumes) return;
+          var list = catalog.perfumes.filter(function (p) { return p.visible !== false; });
+          list.sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
+          var byId = {};
+          list.forEach(function (p) { byId[p.id] = p; });
+          // 1) Datos de la ficha.
+          Object.keys(PERFUMES).forEach(function (k) { if (!byId[k]) delete PERFUMES[k]; });
+          list.forEach(function (p) {
+            var tags = [p.type, p.gender];
+            if (p.badge === "Árabe" && tags.indexOf("Árabe") < 0) tags.push("Árabe");
+            PERFUMES[p.id] = { brand: p.brand, name: p.name, tags: tags, desc: p.desc, uso: p.uso, salida: p.salida, corazon: p.corazon, fondo: p.fondo };
+          });
+          // 2) WhatsApp de la tienda (ficha, carrito y enlaces de la página).
+          if (catalog.whatsapp) {
+            WA = "https://wa.me/52" + catalog.whatsapp;
+            document.querySelectorAll('a[href*="wa.me/"]').forEach(function (a) {
+              a.href = a.href.replace(/wa\.me\/\d+/, "wa.me/52" + catalog.whatsapp);
+            });
+            if (window.__BP_setCartWA) window.__BP_setCartWA(catalog.whatsapp);
+          }
+          // 3) Fotos: se reutilizan las ya incrustadas en la página (catálogo fijo).
+          var imgById = {};
+          document.querySelectorAll(".card[data-perfume] img").forEach(function (img) {
+            var c = img.closest(".card");
+            if (c && !imgById[c.getAttribute("data-perfume")]) imgById[c.getAttribute("data-perfume")] = img.getAttribute("src");
+          });
+          // El distintivo lo manda la sección (como en el catálogo fijo):
+          // en "Los más vendidos" todos llevan "Más vendido", en "Buen Fin"
+          // "Oferta Buen Fin" y en "Perfumes Árabes" "Árabe".
+          function badgeFor(section, p) {
+            if (section === "mas-vendidos") return ["badge-best", "Más vendido"];
+            if (section === "buen-fin") return ["badge-offer", "Oferta Buen Fin"];
+            if (section === "arabes") return ["badge-arabe", "Árabe"];
+            return null;
+          }
+          function metaTags(section, p) {
+            if (section === "buen-fin") return [p.type, "Buen Fin"];
+            if (section === "arabes") return [p.type, p.gender];
+            return [p.type];
+          }
+          function buildCard(template, section, p, hidden) {
+            var card = template.cloneNode(true);
+            card.setAttribute("data-perfume", p.id);
+            if (hidden) {
+              card.setAttribute("aria-hidden", "true");
+              card.setAttribute("tabindex", "-1");
+              card.removeAttribute("role");
+              card.removeAttribute("aria-label");
+            } else {
+              card.removeAttribute("aria-hidden");
+              card.setAttribute("role", "button");
+              card.setAttribute("tabindex", "0");
+              card.setAttribute("aria-label", "Ver descripción y notas de " + p.name + " de " + p.brand);
+            }
+            var img = card.querySelector("img");
+            if (img) {
+              img.setAttribute("src", imgById[p.id] || ("fotos/" + p.id + ".jpg"));
+              img.setAttribute("alt", "Perfume " + p.name + " de " + p.brand);
+            }
+            var badge = card.querySelector(".card-badge");
+            if (badge) badge.remove();
+            var b = badgeFor(section, p);
+            if (b) {
+              var bs = document.createElement("span");
+              bs.className = "card-badge " + b[0];
+              bs.textContent = b[1];
+              card.insertBefore(bs, card.firstChild);
+            }
+            var brand = card.querySelector(".brand");
+            if (brand) brand.textContent = p.brand;
+            var nm = card.querySelector(".pname");
+            if (nm) nm.textContent = p.name;
+            var meta = card.querySelector(".meta");
+            if (meta) {
+              meta.innerHTML = "";
+              metaTags(section, p).forEach(function (t) {
+                var s = document.createElement("span");
+                s.className = "tag";
+                s.textContent = t;
+                meta.appendChild(s);
+              });
+            }
+            var oldBtn = card.querySelector(".add-btn");
+            if (oldBtn) oldBtn.remove();
+            return card;
+          }
+          function fillGrid(sectionId, container, ids, slide) {
+            if (!container) return;
+            var template = container.querySelector(".card");
+            if (!template) return;
+            var frag = document.createDocumentFragment();
+            ids.forEach(function (id) {
+              var p = byId[id];
+              if (p) frag.appendChild(buildCard(template, sectionId, p, false));
+            });
+            if (slide) {
+              ids.forEach(function (id) {
+                var p = byId[id];
+                if (p) frag.appendChild(buildCard(template, sectionId, p, true));
+              });
+            }
+            container.innerHTML = "";
+            container.appendChild(frag);
+          }
+          var SECTIONS = { "temporada": "temporada", "novedades": "novedades", "mas-vendidos": "mas-vendidos", "buen-fin": "buen-fin", "arabes": "arabes", "mas-comerciales": "comerciales" };
+          Object.keys(SECTIONS).forEach(function (slug) {
+            var sec = document.getElementById(SECTIONS[slug]);
+            if (!sec) return;
+            var ids = list.filter(function (p) { return (p.sections || []).indexOf(slug) >= 0; }).map(function (p) { return p.id; });
+            var track = sec.querySelector(".track");
+            if (track) { fillGrid(slug, track, ids, true); return; }
+            var grid = sec.querySelector(".grid");
+            if (grid) fillGrid(slug, grid, ids, false);
+          });
+          // Hombre / Mujer: dos grupos, Dulces y Frescos.
+          ["hombre", "mujer"].forEach(function (gid) {
+            var sec = document.getElementById(gid);
+            if (!sec) return;
+            var grids = sec.querySelectorAll(".grid");
+            if (grids.length < 2) return;
+            var dulces = list.filter(function (p) { return (p.sections || []).indexOf(gid) >= 0 && p.type === "Dulce"; }).map(function (p) { return p.id; });
+            var frescos = list.filter(function (p) { return (p.sections || []).indexOf(gid) >= 0 && p.type === "Fresco"; }).map(function (p) { return p.id; });
+            fillGrid(gid, grids[0], dulces, false);
+            fillGrid(gid, grids[1], frescos, false);
+          });
+          // Volver a ligar las tarjetas nuevas a la ficha.
+          document.querySelectorAll(".card[data-perfume]").forEach(function (card) {
+            function abrir2() {
+              var p = PERFUMES[card.getAttribute("data-perfume")];
+              if (!p) return;
+              var img = card.querySelector("img");
+              openFicha(p, img ? img.getAttribute("src") : "", card.getAttribute("data-perfume"));
+            }
+            card.addEventListener("click", abrir2);
+            card.addEventListener("keydown", function (e) {
+              if (e.key === "Enter" || e.key === " ") { e.preventDefault(); abrir2(); }
+            });
+          });
+        };
       })();
     </script>
 
@@ -1660,7 +1805,9 @@
 
         // Botón "Añadir al carrito" en cada tarjeta: NO abre la ficha ni
         // sale de la página; solo suma el perfume al carrito.
+        function bindCardButtons() {
         document.querySelectorAll(".card[data-perfume]").forEach(function (card) {
+          if (card.querySelector(".add-btn")) return;
           var btn = document.createElement("button");
           btn.type = "button";
           btn.className = "add-btn";
@@ -1682,6 +1829,10 @@
           var body = card.querySelector(".card-body");
           if (body) body.appendChild(btn);
         });
+        }
+        window.__BP_bindCartButtons = bindCardButtons;
+        window.__BP_setCartWA = function (num) { WA = "https://wa.me/52" + num; };
+        bindCardButtons();
 
         // Botón "Añadir al carrito" dentro de la ficha del perfume abierto.
         var fichaAdd = document.getElementById("fichaAdd");
@@ -1736,5 +1887,21 @@
         render();
       })();
     </script>
-  </body>
+      <script>
+      // ---------- Catálogo desde catalogo.json (lo que sube la app admin) ----------
+      // Si el archivo carga, las secciones, fichas y carrito se alimentan de él.
+      // Si no carga (sin internet o archivo ausente), la página se queda con su
+      // catálogo fijo, así nunca queda en blanco.
+      (function () {
+        function apply(c) {
+          if (window.__BP_applyCatalog) window.__BP_applyCatalog(c);
+          if (window.__BP_bindCartButtons) window.__BP_bindCartButtons();
+        }
+        fetch("catalogo.json", { cache: "no-store" })
+          .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(function (c) { if (c && c.perfumes && c.perfumes.length) apply(c); })
+          .catch(function () { /* respaldo: catálogo fijo */ });
+      })();
+    </script>
+</body>
 </html>
