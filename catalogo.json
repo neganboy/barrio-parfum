@@ -165,8 +165,8 @@
     },
     {
       "id": "yara",
-      "brand": "traca",
-      "name": "matraca",
+      "brand": "Lattafa",
+      "name": "Yara",
       "type": "Dulce",
       "gender": "Para mujer",
       "sections": [
@@ -507,6 +507,26 @@
       "photo": "fotos\/light-blue.jpg",
       "visible": true,
       "order": 24
+    },
+    {
+      "id": "lataffa-atlas",
+      "brand": "Lataffa",
+      "name": "Atlas",
+      "type": "Fresco",
+      "gender": "Para hombre",
+      "sections": [
+        "hombre",
+        "arabes"
+      ],
+      "badge": "",
+      "desc": "Un perfume fresco y limpio de Lataffa , ligero y agradable para el día a día. Atlas  huele a recién bañado y se siente fino sin ser pesado.",
+      "uso": "Para el día y la noche, según te guste. Pruébalo con dos atomizaciones.",
+      "salida": "sándalo",
+      "corazon": "piña",
+      "fondo": "coco",
+      "photo": "fotos\/perfume.jpg",
+      "visible": true,
+      "order": 25
     }
   ]
 }
