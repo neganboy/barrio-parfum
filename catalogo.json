@@ -600,7 +600,8 @@
       "visible": true,
       "order": 26,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "nautica-blue",
@@ -621,7 +622,8 @@
       "visible": true,
       "order": 27,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "versace-pour-homme",
@@ -643,7 +645,8 @@
       "visible": true,
       "order": 28,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "hugo-man",
@@ -664,7 +667,8 @@
       "visible": true,
       "order": 29,
       "ml": 125,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "cuba-authentic-flame",
@@ -685,7 +689,8 @@
       "visible": true,
       "order": 30,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "armaf-odyssey-mega",
@@ -707,7 +712,8 @@
       "visible": true,
       "order": 31,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "shakira-fucsia",
@@ -728,7 +734,8 @@
       "visible": true,
       "order": 32,
       "ml": 80,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "tous-neon-candy",
@@ -749,7 +756,8 @@
       "visible": true,
       "order": 33,
       "ml": 90,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "shakira-s-blush-kiss",
@@ -770,7 +778,8 @@
       "visible": true,
       "order": 34,
       "ml": 80,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "afnan-9am",
@@ -792,7 +801,8 @@
       "visible": true,
       "order": 35,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "lattafa-badee-amethyst",
@@ -813,7 +823,8 @@
       "visible": true,
       "order": 36,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "lattafa-musaman-white",
@@ -834,7 +845,8 @@
       "visible": true,
       "order": 37,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "adidas-dynamic-pulse",
@@ -855,7 +867,8 @@
       "visible": true,
       "order": 38,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "cuba-blue",
@@ -876,7 +889,8 @@
       "visible": true,
       "order": 39,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "cuba-grey",
@@ -897,7 +911,8 @@
       "visible": true,
       "order": 40,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "revlon-charlie-white",
@@ -918,7 +933,8 @@
       "visible": true,
       "order": 41,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "antonio-banderas-power-seduction",
@@ -939,7 +955,8 @@
       "visible": true,
       "order": 42,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "jovan-white-musk",
@@ -960,7 +977,8 @@
       "visible": true,
       "order": 43,
       "ml": 96,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "adidas-pure-game",
@@ -981,7 +999,8 @@
       "visible": true,
       "order": 44,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "elizabeth-arden-sunflowers",
@@ -1002,7 +1021,8 @@
       "visible": true,
       "order": 45,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "guess-seductive-charm",
@@ -1023,7 +1043,8 @@
       "visible": true,
       "order": 46,
       "ml": 75,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "cacharel-noa",
@@ -1044,7 +1065,8 @@
       "visible": true,
       "order": 47,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "jennifer-lopez-glow",
@@ -1065,7 +1087,8 @@
       "visible": true,
       "order": 48,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "armaf-club-nuit-urban-man",
@@ -1087,7 +1110,8 @@
       "visible": true,
       "order": 49,
       "ml": 105,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     },
     {
       "id": "afnan-9pm-mujer",
@@ -1109,7 +1133,8 @@
       "visible": true,
       "order": 50,
       "ml": 100,
-      "stock": 10
+      "stock": 10,
+      "economico": true
     }
   ],
   "reviews": [

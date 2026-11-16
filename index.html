@@ -659,6 +659,7 @@
       .ficha-pres #fichaPres { color: var(--ink); font-weight: 500; }
       .stock-ok { color: var(--olive-deep); font-weight: 600; }
       .stock-out { color: #a33; font-weight: 600; }
+      .stock-eco { color: #7c5c1e; font-weight: 600; }
 
       @media (max-width: 720px) {
         .info-grid { grid-template-columns: 1fr; }
@@ -1642,7 +1643,7 @@
             <span class="brand" id="fichaBrand"></span>
             <h2 id="fichaName"></h2>
             <div class="ficha-tags" id="fichaTags"></div>
-            <p class="ficha-pres"><span id="fichaPres">Presentación: 100 ml</span> · <span id="fichaStock" class="stock-ok">Disponible</span></p>
+            <p class="ficha-pres"><span id="fichaPres">Presentación: 100 ml</span> · <span id="fichaStock" class="stock-ok">Disponible</span><span id="fichaEco" class="stock-eco" hidden> · Económico</span></p>
             <p class="ficha-desc" id="fichaDesc"></p>
             <p class="ficha-uso" id="fichaUso"></p>
             <p class="notas-title">Notas de olor</p>
@@ -1842,6 +1843,7 @@
           fondo: document.getElementById("fichaFondo"),
           pres: document.getElementById("fichaPres"),
           stock: document.getElementById("fichaStock"),
+          eco: document.getElementById("fichaEco"),
           wa: document.getElementById("fichaWa"),
           close: document.getElementById("fichaClose")
         };
@@ -1878,6 +1880,7 @@
             el.stock.textContent = out ? "Agotado" : "Disponible";
             el.stock.className = out ? "stock-out" : "stock-ok";
           }
+          if (el.eco) el.eco.hidden = !p.economico;
           var addBtn = document.getElementById("fichaAdd");
           if (addBtn) { addBtn.disabled = out; addBtn.style.opacity = out ? ".45" : ""; }
           el.wa.href = waLink(p);
@@ -1943,7 +1946,7 @@
           list.forEach(function (p) {
             var tags = [p.type, p.gender];
             if (p.badge === "Árabe" && tags.indexOf("Árabe") < 0) tags.push("Árabe");
-            PERFUMES[p.id] = { brand: p.brand, name: p.name, tags: tags, desc: p.desc, uso: p.uso, salida: p.salida, corazon: p.corazon, fondo: p.fondo, ml: p.ml, stock: p.stock };
+            PERFUMES[p.id] = { brand: p.brand, name: p.name, tags: tags, desc: p.desc, uso: p.uso, salida: p.salida, corazon: p.corazon, fondo: p.fondo, ml: p.ml, stock: p.stock, economico: !!p.economico };
           });
           // 2) WhatsApp de la tienda (ficha, carrito y enlaces de la página).
           if (catalog.whatsapp) {
@@ -2508,6 +2511,9 @@
         function scorePerfume(p) {
           var s = 0;
           if (quizSel.type && p.type === quizSel.type) s += 3;
+          // Económicos: punto extra para que se recomienden más (gana
+          // empates y se acerca cuando está cerca). Sin precios en la página.
+          if (p.economico) s += 1;
           var uso = norm(p.uso || "");
           if (quizSel.momento === "dia" && uso.indexOf("dia") >= 0) s += 2;
           if (quizSel.momento === "noche" && uso.indexOf("noche") >= 0) s += 2;
