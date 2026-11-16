@@ -750,7 +750,7 @@
         <button type="button" class="quiz-card" id="quizOpen" aria-haspopup="dialog" aria-controls="quizBackdrop">
           <span class="quiz-card-text">
             <strong>¿No sabes qué perfume elegir?</strong>
-            <span>Te ayudamos con 3 preguntas rápidas.</span>
+            <span>Te ayudamos con 5 preguntas rápidas.</span>
           </span>
           <span class="quiz-card-btn">Ayúdame a elegir</span>
         </button>
@@ -1688,10 +1688,28 @@
           <button type="button" id="quizClose" aria-label="Cerrar test">✕</button>
         </div>
         <h2 id="quizModalTitle">¿No sabes qué perfume elegir?</h2>
-        <p class="sec-sub">Contesta 3 preguntas rápidas y te recomendamos 3 perfumes de nuestro catálogo.</p>
+        <p class="sec-sub">Contesta 5 preguntas rápidas y te recomendamos 3 perfumes de nuestro catálogo.</p>
         <div class="quiz-box">
           <div class="quiz-q">
-            <p class="quiz-qtitle">1. ¿Te gustan más los dulces o los frescos?</p>
+            <p class="quiz-qtitle">1. ¿Eres hombre o mujer?</p>
+            <div class="quiz-opts" data-quiz="genero">
+              <button type="button" data-value="hombre">Hombre</button>
+              <button type="button" data-value="mujer">Mujer</button>
+              <button type="button" data-value="">Me da igual</button>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p class="quiz-qtitle">2. ¿Qué edad tienes?</p>
+            <div class="quiz-opts" data-quiz="edad">
+              <button type="button" data-value="18-25">18 a 25</button>
+              <button type="button" data-value="26-35">26 a 35</button>
+              <button type="button" data-value="36-45">36 a 45</button>
+              <button type="button" data-value="45+">Más de 45</button>
+              <button type="button" data-value="">Me da igual</button>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p class="quiz-qtitle">3. ¿Te gustan más los dulces o los frescos?</p>
             <div class="quiz-opts" data-quiz="type">
               <button type="button" data-value="Dulce">Dulces</button>
               <button type="button" data-value="Fresco">Frescos</button>
@@ -1699,7 +1717,7 @@
             </div>
           </div>
           <div class="quiz-q">
-            <p class="quiz-qtitle">2. ¿Lo quieres para el día o para la noche?</p>
+            <p class="quiz-qtitle">4. ¿Lo quieres para el día o para la noche?</p>
             <div class="quiz-opts" data-quiz="momento">
               <button type="button" data-value="dia">Para el día</button>
               <button type="button" data-value="noche">Para la noche</button>
@@ -1707,7 +1725,7 @@
             </div>
           </div>
           <div class="quiz-q">
-            <p class="quiz-qtitle">3. ¿Para qué ocasión lo quieres?</p>
+            <p class="quiz-qtitle">5. ¿Para qué ocasión lo quieres?</p>
             <div class="quiz-opts" data-quiz="ocasion">
               <button type="button" data-value="fiesta">Fiesta</button>
               <button type="button" data-value="trabajo">Trabajo</button>
@@ -2477,7 +2495,7 @@
         });
 
         // ---------- 5) Mini test: ¿qué perfume elegir? ----------
-        var quizSel = { type: "", momento: "", ocasion: "" };
+        var quizSel = { genero: "", edad: "", type: "", momento: "", ocasion: "" };
         document.querySelectorAll(".quiz-opts").forEach(function (box) {
           box.addEventListener("click", function (e) {
             var btn = e.target.closest ? e.target.closest("button") : null;
@@ -2497,14 +2515,38 @@
             var words = OCC_WORDS[quizSel.ocasion] || [];
             words.forEach(function (w) { if (uso.indexOf(norm(w)) >= 0) s += 2; });
           }
+          // Edad: influye leve, solo con lo que ya dice cada perfume (type y uso).
+          if (quizSel.edad === "18-25") {
+            if (p.type === "Fresco") s += 2;
+            if (uso.indexOf("fiesta") >= 0 || uso.indexOf("antro") >= 0) s += 2;
+            if (uso.indexOf("dia") >= 0 || uso.indexOf("diario") >= 0) s += 1;
+          } else if (quizSel.edad === "26-35") {
+            if (uso.indexOf("dia") >= 0 && uso.indexOf("noche") >= 0) s += 2;
+            if (uso.indexOf("oficina") >= 0 || uso.indexOf("salida") >= 0) s += 1;
+          } else if (quizSel.edad === "36-45" || quizSel.edad === "45+") {
+            if (uso.indexOf("noche") >= 0) s += 2;
+            if (uso.indexOf("cita") >= 0 || uso.indexOf("trabajo") >= 0 || uso.indexOf("oficina") >= 0) s += 2;
+            if (uso.indexOf("elegante") >= 0 || uso.indexOf("formal") >= 0) s += 1;
+          }
           return s;
+        }
+        // Género: solo perfumes de ese género; Unisex entra en ambos.
+        // Si el perfume no trae dato de género (respaldo sin catalogo.json),
+        // no se descarta.
+        function genderMatches(p) {
+          if (!quizSel.genero) return true;
+          var g = norm(p.gender || "");
+          if (!g) return true;
+          if (g.indexOf("unisex") >= 0) return true;
+          if (quizSel.genero === "hombre") return g.indexOf("hombre") >= 0;
+          return g.indexOf("mujer") >= 0;
         }
         var quizGo = document.getElementById("quizGo");
         if (quizGo) {
           quizGo.addEventListener("click", function () {
             var results = document.getElementById("quizResults");
             if (!results) return;
-            var list = perfumeList().slice();
+            var list = perfumeList().slice().filter(genderMatches);
             list.sort(function (a, b) {
               var d = scorePerfume(b) - scorePerfume(a);
               if (d) return d;
