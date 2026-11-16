@@ -1,5 +1,5 @@
 {
-  "whatsapp": "4773152601",
+  "whatsapp": "4777665438",
   "paymentMethods": [
     "Transferencia",
     "Meses sin intereses"
@@ -22,9 +22,11 @@
       "salida": "Lavanda y menta",
       "corazon": "Vainilla y benjuí",
       "fondo": "Miel, haba tonka y tabaco",
-      "photo": "fotos\/le-male-elixir.jpg",
+      "photo": "fotos/le-male-elixir.jpg",
       "visible": true,
-      "order": 0
+      "order": 0,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "stronger",
@@ -42,9 +44,11 @@
       "salida": "Pimienta rosa, bayas de enebro y violeta",
       "corazon": "Toffee, canela, lavanda y salvia",
       "fondo": "Vainilla, haba tonka, castaña y ante",
-      "photo": "fotos\/stronger.jpg",
+      "photo": "fotos/stronger.jpg",
       "visible": true,
-      "order": 1
+      "order": 1,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "khamrah",
@@ -64,9 +68,11 @@
       "salida": "Canela, nuez moscada y bergamota",
       "corazon": "Dátiles, praliné, nardo y mahonial",
       "fondo": "Vainilla, haba tonka, benjuí, mirra y ámbar",
-      "photo": "fotos\/khamrah.jpg",
+      "photo": "fotos/khamrah.jpg",
       "visible": true,
-      "order": 2
+      "order": 2,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "club-de-nuit",
@@ -83,9 +89,11 @@
       "salida": "Limón, piña, bergamota, grosella negra y manzana",
       "corazon": "Abedul, jazmín y rosa",
       "fondo": "Almizcle, ámbar gris, pachulí y vainilla",
-      "photo": "fotos\/club-de-nuit.jpg",
+      "photo": "fotos/club-de-nuit.jpg",
       "visible": true,
-      "order": 3
+      "order": 3,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "hawas",
@@ -102,9 +110,11 @@
       "salida": "Manzana, bergamota, limón y canela",
       "corazon": "Notas acuosas, ciruela, flor de azahar y cardamomo",
       "fondo": "Ámbar gris, almizcle, pachulí y madera a la deriva",
-      "photo": "fotos\/hawas.jpg",
+      "photo": "fotos/hawas.jpg",
       "visible": true,
-      "order": 4
+      "order": 4,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "asad",
@@ -121,9 +131,11 @@
       "salida": "Piña, pimienta negra y tabaco",
       "corazon": "Pachulí, café e iris",
       "fondo": "Vainilla, ámbar, maderas secas, benjuí y ládano",
-      "photo": "fotos\/asad.jpg",
+      "photo": "fotos/asad.jpg",
       "visible": true,
-      "order": 5
+      "order": 5,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "odyssey-mandarin",
@@ -140,9 +152,11 @@
       "salida": "Mandarina, naranja, azafrán y salvia",
       "corazon": "Caramelo, haba tonka y caléndula",
       "fondo": "Ambroxan, vetiver y cedro",
-      "photo": "fotos\/odyssey-mandarin.jpg",
+      "photo": "fotos/odyssey-mandarin.jpg",
       "visible": true,
-      "order": 6
+      "order": 6,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "fakhar",
@@ -159,9 +173,11 @@
       "salida": "Manzana, bergamota y jengibre",
       "corazon": "Lavanda, geranio, bayas de enebro y salvia",
       "fondo": "Haba tonka, cedro, pachulí y vetiver",
-      "photo": "fotos\/fakhar.jpg",
+      "photo": "fotos/fakhar.jpg",
       "visible": true,
-      "order": 7
+      "order": 7,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "yara",
@@ -178,9 +194,11 @@
       "salida": "Orquídea, heliotropo y mandarina",
       "corazon": "Acorde gourmand y frutas tropicales",
       "fondo": "Vainilla, almizcle y sándalo",
-      "photo": "fotos\/yara.jpg",
+      "photo": "fotos/yara.jpg",
       "visible": true,
-      "order": 8
+      "order": 8,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "nueve-pm",
@@ -197,9 +215,11 @@
       "salida": "Manzana, canela, lavanda silvestre y bergamota",
       "corazon": "Flor de azahar y lirio de los valles (muguete)",
       "fondo": "Vainilla, haba tonka, ámbar y pachulí",
-      "photo": "fotos\/nueve-pm.jpg",
+      "photo": "fotos/nueve-pm.jpg",
       "visible": true,
-      "order": 9
+      "order": 9,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "black-opium",
@@ -219,9 +239,11 @@
       "salida": "Pera, pimienta rosa y flor de azahar",
       "corazon": "Café y jazmín",
       "fondo": "Vainilla, pachulí y cedro",
-      "photo": "fotos\/black-opium.jpg",
+      "photo": "fotos/black-opium.jpg",
       "visible": true,
-      "order": 10
+      "order": 10,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "born-in-roma",
@@ -240,9 +262,11 @@
       "salida": "Notas minerales, hoja de violeta y sal",
       "corazon": "Jengibre y salvia",
       "fondo": "Vetiver y notas amaderadas",
-      "photo": "fotos\/born-in-roma.jpg",
+      "photo": "fotos/born-in-roma.jpg",
       "visible": true,
-      "order": 11
+      "order": 11,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "sauvage",
@@ -262,9 +286,11 @@
       "salida": "Bergamota de Calabria y pimienta",
       "corazon": "Pimienta de Sichuán, lavanda, geranio y pachulí",
       "fondo": "Cedro, ládano y ambroxan",
-      "photo": "fotos\/sauvage.jpg",
+      "photo": "fotos/sauvage.jpg",
       "visible": true,
-      "order": 12
+      "order": 12,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "most-wanted",
@@ -283,9 +309,11 @@
       "salida": "Jengibre rojo",
       "corazon": "Notas amaderadas",
       "fondo": "Toffee (caramelo tostado)",
-      "photo": "fotos\/most-wanted.jpg",
+      "photo": "fotos/most-wanted.jpg",
       "visible": true,
-      "order": 13
+      "order": 13,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "libre",
@@ -303,9 +331,11 @@
       "salida": "Lavanda, mandarina, grosella negra y petit grain",
       "corazon": "Lavanda, flor de azahar y jazmín",
       "fondo": "Vainilla de Madagascar, almizcle, cedro y ámbar gris",
-      "photo": "fotos\/libre.jpg",
+      "photo": "fotos/libre.jpg",
       "visible": true,
-      "order": 14
+      "order": 14,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "bright-crystal",
@@ -323,9 +353,11 @@
       "salida": "Yuzu, granada y notas acuosas heladas",
       "corazon": "Peonía, magnolia y flor de loto",
       "fondo": "Almizcle, caoba y ámbar",
-      "photo": "fotos\/bright-crystal.jpg",
+      "photo": "fotos/bright-crystal.jpg",
       "visible": true,
-      "order": 15
+      "order": 15,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "one-million",
@@ -344,9 +376,11 @@
       "salida": "Pomelo, menta y mandarina roja",
       "corazon": "Rosa, canela y especias",
       "fondo": "Cuero, notas amaderadas, ámbar y pachulí",
-      "photo": "fotos\/one-million.jpg",
+      "photo": "fotos/one-million.jpg",
       "visible": true,
-      "order": 16
+      "order": 16,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "bleu",
@@ -364,9 +398,11 @@
       "salida": "Cítricos, menta, pomelo y pimienta rosa",
       "corazon": "Jengibre, jazmín, nuez moscada y melón",
       "fondo": "Incienso, vetiver, cedro, sándalo y pachulí",
-      "photo": "fotos\/bleu.jpg",
+      "photo": "fotos/bleu.jpg",
       "visible": true,
-      "order": 17
+      "order": 17,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "acqua-di-gio",
@@ -384,9 +420,11 @@
       "salida": "Bergamota, nerolí, mandarina verde y notas marinas",
       "corazon": "Jazmín, romero y caqui",
       "fondo": "Pachulí, cedro, almizcle blanco y ámbar",
-      "photo": "fotos\/acqua-di-gio.jpg",
+      "photo": "fotos/acqua-di-gio.jpg",
       "visible": true,
-      "order": 18
+      "order": 18,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "eros",
@@ -404,9 +442,11 @@
       "salida": "Menta, manzana verde y limón",
       "corazon": "Haba tonka, geranio y ambroxan",
       "fondo": "Vainilla de Madagascar, vetiver, musgo de roble y cedro",
-      "photo": "fotos\/eros.jpg",
+      "photo": "fotos/eros.jpg",
       "visible": true,
-      "order": 19
+      "order": 19,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "invictus",
@@ -423,9 +463,11 @@
       "salida": "Toronja, notas marinas y mandarina",
       "corazon": "Hoja de laurel y jazmín",
       "fondo": "Madera de guayaco, musgo de roble, pachulí y ámbar gris",
-      "photo": "fotos\/invictus.jpg",
+      "photo": "fotos/invictus.jpg",
       "visible": true,
-      "order": 20
+      "order": 20,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "boss-bottled",
@@ -442,9 +484,11 @@
       "salida": "Manzana, ciruela, bergamota, limón y geranio",
       "corazon": "Canela, caoba y clavel",
       "fondo": "Vainilla, sándalo, cedro, vetiver y olivo",
-      "photo": "fotos\/boss-bottled.jpg",
+      "photo": "fotos/boss-bottled.jpg",
       "visible": true,
-      "order": 21
+      "order": 21,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "good-girl",
@@ -463,9 +507,11 @@
       "salida": "Almendra, café, bergamota y limón",
       "corazon": "Jazmín sambac, nardo, rosa y flor de azahar",
       "fondo": "Haba tonka, cacao, vainilla, praliné, canela y pachulí",
-      "photo": "fotos\/good-girl.jpg",
+      "photo": "fotos/good-girl.jpg",
       "visible": true,
-      "order": 22
+      "order": 22,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "la-vie-est-belle",
@@ -484,9 +530,11 @@
       "salida": "Grosella negra y pera",
       "corazon": "Iris, jazmín y flor de azahar",
       "fondo": "Praliné, vainilla, pachulí y haba tonka",
-      "photo": "fotos\/la-vie-est-belle.jpg",
+      "photo": "fotos/la-vie-est-belle.jpg",
       "visible": true,
-      "order": 23
+      "order": 23,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "light-blue",
@@ -504,9 +552,11 @@
       "salida": "Limón siciliano, manzana, cedro y campanilla",
       "corazon": "Bambú, jazmín y rosa blanca",
       "fondo": "Cedro, almizcle y ámbar",
-      "photo": "fotos\/light-blue.jpg",
+      "photo": "fotos/light-blue.jpg",
       "visible": true,
-      "order": 24
+      "order": 24,
+      "ml": 100,
+      "stock": 10
     },
     {
       "id": "lataffa-atlas",
@@ -524,9 +574,33 @@
       "salida": "sándalo",
       "corazon": "piña",
       "fondo": "coco",
-      "photo": "fotos\/lataffa-atlas.jpg",
+      "photo": "fotos/lataffa-atlas.jpg",
       "visible": true,
-      "order": 25
+      "order": 25,
+      "ml": 100,
+      "stock": 10
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Mariana G.",
+      "stars": 5,
+      "text": "Me llegó rapidísimo y el perfume huele igualito al original. Ya es mi segunda compra."
+    },
+    {
+      "name": "Carlos R.",
+      "stars": 5,
+      "text": "Pedí el Khamrah por WhatsApp y me atendieron súper bien, me explicaron todo."
+    },
+    {
+      "name": "Fernanda L.",
+      "stars": 5,
+      "text": "El decant me sirvió para probarlo antes de comprar el grande. Muy recomendados."
+    },
+    {
+      "name": "Diego M.",
+      "stars": 4,
+      "text": "Buen precio y entrega en persona sin problema. Volveré a comprar."
     }
   ]
 }

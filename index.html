@@ -556,6 +556,89 @@
       }
       .wa-float:hover { background: var(--wa-deep); transform: scale(1.06); }
 
+
+      /* ---------- Buscador y filtros ---------- */
+      .search-box { border: 1px solid var(--line); background: var(--olive-soft); padding: 22px 22px 20px; }
+      .search-box label { display: block; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--olive-deep); margin-bottom: 8px; }
+      .search-input { width: 100%; font-family: var(--sans); font-size: 17px; padding: 13px 16px; border: 1px solid var(--olive); border-radius: 999px; background: #fff; color: var(--ink); outline: none; }
+      .search-input:focus { border-color: var(--olive-deep); box-shadow: 0 0 0 3px var(--olive-wash); }
+      .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
+      .filters .f-label { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
+      .chip { font-family: var(--sans); font-size: 13.5px; font-weight: 500; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--olive); background: #fff; color: var(--olive-deep); cursor: pointer; }
+      .chip:hover { background: var(--olive-wash); }
+      .chip.active { background: var(--olive); color: #fff; }
+      .search-count { font-size: 14px; color: var(--olive-deep); font-weight: 500; margin: 12px 0 0; min-height: 20px; }
+      .no-results { display: none; margin-top: 14px; padding: 18px; border: 1px dashed var(--olive); background: #fff; color: var(--muted); font-size: 15px; text-align: center; }
+      .no-results a { color: var(--olive-deep); font-weight: 600; }
+
+      /* ---------- Garantía de original ---------- */
+      .garantia { margin-top: 26px; }
+      .garantia-in { background: var(--olive-deep); color: #fff; text-align: center; padding: 30px 22px 28px; }
+      .garantia-in .shield { width: 52px; height: 52px; margin: 0 auto; border-radius: 50%; background: rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center; }
+      .garantia-in h2 { font-family: var(--serif); font-size: clamp(30px, 5vw, 42px); font-weight: 700; margin: 10px 0 6px; letter-spacing: .04em; }
+      .garantia-in p { margin: 0 auto; max-width: 560px; font-size: 15.5px; line-height: 1.55; color: #eef0e0; }
+
+      /* ---------- Quiz ---------- */
+      .quiz-box { border: 1px solid var(--line); padding: 26px 24px; background: #fff; }
+      .quiz-q { margin-bottom: 20px; }
+      .quiz-qtitle { font-family: var(--serif); font-size: 21px; font-weight: 600; margin: 0 0 10px; }
+      .quiz-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+      .quiz-opts button { font-family: var(--sans); font-size: 14.5px; font-weight: 500; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--olive); background: #fff; color: var(--olive-deep); cursor: pointer; }
+      .quiz-opts button:hover { background: var(--olive-wash); }
+      .quiz-opts button.active { background: var(--olive); color: #fff; }
+      .quiz-go { display: inline-flex; align-items: center; justify-content: center; background: var(--olive); color: #fff; border: none; font-family: var(--sans); font-size: 16px; font-weight: 600; padding: 14px 26px; border-radius: 999px; cursor: pointer; min-height: 52px; }
+      .quiz-go:hover { background: var(--olive-deep); }
+      .quiz-results { margin-top: 22px; display: grid; gap: 12px; }
+      .quiz-res-title { font-family: var(--serif); font-size: 23px; font-weight: 600; margin: 0; }
+      .quiz-res { border: 1px solid var(--line); background: var(--olive-soft); padding: 16px 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+      .quiz-res .pname { font-size: 21px; }
+      .quiz-ver { margin-left: auto; font-family: var(--sans); font-size: 13.5px; font-weight: 600; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--olive); background: #fff; color: var(--olive-deep); cursor: pointer; }
+      .quiz-ver:hover { background: var(--olive); color: #fff; }
+
+      /* ---------- Secciones informativas ---------- */
+      .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+      .info-card { border: 1px solid var(--line); padding: 26px 26px 24px; background: #fff; }
+      .info-card h3 { font-family: var(--serif); font-size: 26px; font-weight: 600; margin: 0 0 8px; }
+      .info-card p { margin: 0 0 10px; font-size: 15.5px; line-height: 1.6; color: #3c3c36; }
+      .info-card ul { margin: 0 0 18px; padding-left: 20px; font-size: 15px; line-height: 1.6; color: #3c3c36; }
+      .info-card ul li { margin-bottom: 6px; }
+      .info-card ul li::marker { color: var(--olive); }
+      .wa-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; background: var(--wa-deep); color: #fff; text-decoration: none; font-size: 15.5px; font-weight: 600; padding: 13px 22px; border-radius: 999px; min-height: 50px; }
+      .wa-btn:hover { background: #0d7038; }
+
+      /* ---------- Reseñas ---------- */
+      .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+      .review { border: 1px solid var(--line); background: var(--olive-soft); padding: 20px 20px 18px; }
+      .review .stars { color: #b8860b; font-size: 18px; letter-spacing: 2px; margin-bottom: 10px; }
+      .review-text { font-size: 15.5px; line-height: 1.6; color: #33332d; margin: 0 0 12px; }
+      .review-name { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--olive-deep); margin: 0; }
+
+      /* ---------- Preguntas frecuentes ---------- */
+      .faq-list { display: grid; gap: 12px; max-width: 760px; }
+      .faq-list details { border: 1px solid var(--line); background: #fff; padding: 0 20px; }
+      .faq-list summary { cursor: pointer; font-family: var(--serif); font-size: 20px; font-weight: 600; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px; align-items: center; }
+      .faq-list summary::-webkit-details-marker { display: none; }
+      .faq-list summary::after { content: "+"; color: var(--olive); font-size: 26px; font-weight: 400; flex: none; }
+      .faq-list details[open] summary::after { content: "−"; }
+      .faq-list details p { margin: 0 0 18px; font-size: 15.5px; line-height: 1.6; color: #3c3c36; }
+      .faq-list details p a { color: var(--olive-deep); font-weight: 500; }
+
+      /* ---------- Compartir ---------- */
+      .share-btn { margin-top: 10px; width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #fff; border: 1px solid var(--line); color: var(--muted); font-family: var(--sans); font-size: 13.5px; font-weight: 500; padding: 9px 12px; min-height: 40px; border-radius: 999px; cursor: pointer; }
+      .share-btn:hover { border-color: var(--olive); color: var(--olive-deep); background: var(--olive-wash); }
+      .ficha-share { width: 100%; display: flex; align-items: center; justify-content: center; gap: 9px; background: #fff; border: 1px solid var(--olive); color: var(--olive-deep); font-family: var(--sans); font-size: 16px; font-weight: 600; padding: 13px 20px; border-radius: 999px; min-height: 52px; cursor: pointer; margin-bottom: 10px; }
+      .ficha-share:hover { background: var(--olive-wash); }
+      .ficha-pres { font-size: 15px; color: var(--muted); margin: 0 0 16px; }
+      .ficha-pres #fichaPres { color: var(--ink); font-weight: 500; }
+      .stock-ok { color: var(--olive-deep); font-weight: 600; }
+      .stock-out { color: #a33; font-weight: 600; }
+
+      @media (max-width: 720px) {
+        .info-grid { grid-template-columns: 1fr; }
+        .search-box { padding: 18px 16px 16px; }
+        .quiz-box { padding: 20px 16px; }
+      }
+
       @media (max-width: 720px) {
         .pay-grid { grid-template-columns: 1fr; }
         .grid { grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 12px; }
@@ -588,10 +671,93 @@
         <a href="#hombre">Hombre</a>
         <a href="#mujer">Mujer</a>
         <a href="#pagos">Formas de pago</a>
+        <a href="#buscar">Buscar</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#personalizados">Pedidos</a>
+        <a href="#envios">Envíos</a>
+        <a href="#decants">Decants</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#faq">FAQ</a>
       </nav>
     </header>
 
     <main>
+
+      <!-- ================= BUSCADOR Y FILTROS ================= -->
+      <section id="buscar">
+        <div class="search-box">
+          <label for="searchInput">Buscar perfume</label>
+          <input type="search" class="search-input" id="searchInput" placeholder="Busca por nombre o marca, por ejemplo: Khamrah o Dior…" autocomplete="off" />
+          <div class="filters" role="group" aria-label="Filtrar por tipo">
+            <span class="f-label">Tipo:</span>
+            <button type="button" class="chip active" data-filter-type="">Todos</button>
+            <button type="button" class="chip" data-filter-type="Dulce">Dulces</button>
+            <button type="button" class="chip" data-filter-type="Fresco">Frescos</button>
+          </div>
+          <div class="filters" role="group" aria-label="Filtrar por ocasión">
+            <span class="f-label">Ocasión:</span>
+            <button type="button" class="chip active" data-filter-occ="">Todas</button>
+            <button type="button" class="chip" data-filter-occ="dia">Día</button>
+            <button type="button" class="chip" data-filter-occ="noche">Noche</button>
+            <button type="button" class="chip" data-filter-occ="fiesta">Fiesta</button>
+            <button type="button" class="chip" data-filter-occ="trabajo">Trabajo</button>
+            <button type="button" class="chip" data-filter-occ="cita">Cita</button>
+          </div>
+          <p class="search-count" id="searchCount" aria-live="polite"></p>
+          <div class="no-results" id="noResults">No encontramos perfumes con esa búsqueda. Prueba con otro nombre o marca, o pregúntanos por <a target="_blank" rel="noopener" href="https://wa.me/524777665438?text=Hola%20Barrio%20Parfum%2C%20busco%20un%20perfume%20y%20no%20lo%20encontr%C3%A9%20en%20la%20p%C3%A1gina.%20%C2%BFMe%20puedes%20ayudar%3F">WhatsApp</a> y te lo conseguimos.</div>
+        </div>
+      </section>
+
+      <!-- ================= GARANTÍA DE ORIGINAL ================= -->
+      <section id="garantia" class="garantia">
+        <div class="garantia-in">
+          <div class="shield">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h2>100% originales</h2>
+          <p>Todos nuestros perfumes son 100% originales. Los revisamos antes de entregártelos para que lleguen en perfecto estado, y si tienes cualquier duda pregúntanos por WhatsApp.</p>
+        </div>
+      </section>
+
+      <!-- ================= QUIZ: ¿QUÉ PERFUME ELEGIR? ================= -->
+      <section id="quiz">
+        <div class="sec-head">
+          <h2>¿No sabes qué perfume elegir?</h2>
+          <span class="rule"></span>
+        </div>
+        <p class="sec-sub">Contesta 3 preguntas rápidas y te recomendamos 3 perfumes de nuestro catálogo.</p>
+        <div class="quiz-box">
+          <div class="quiz-q">
+            <p class="quiz-qtitle">1. ¿Te gustan más los dulces o los frescos?</p>
+            <div class="quiz-opts" data-quiz="type">
+              <button type="button" data-value="Dulce">Dulces</button>
+              <button type="button" data-value="Fresco">Frescos</button>
+              <button type="button" data-value="">Me da igual</button>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p class="quiz-qtitle">2. ¿Lo quieres para el día o para la noche?</p>
+            <div class="quiz-opts" data-quiz="momento">
+              <button type="button" data-value="dia">Para el día</button>
+              <button type="button" data-value="noche">Para la noche</button>
+              <button type="button" data-value="">Me da igual</button>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p class="quiz-qtitle">3. ¿Para qué ocasión lo quieres?</p>
+            <div class="quiz-opts" data-quiz="ocasion">
+              <button type="button" data-value="fiesta">Fiesta</button>
+              <button type="button" data-value="trabajo">Trabajo</button>
+              <button type="button" data-value="cita">Cita</button>
+              <button type="button" data-value="dia">Para diario</button>
+              <button type="button" data-value="">Me da igual</button>
+            </div>
+          </div>
+          <button type="button" class="quiz-go" id="quizGo">Ver mis recomendaciones</button>
+          <div class="quiz-results" id="quizResults" aria-live="polite"></div>
+        </div>
+      </section>
+
       <!-- ================= TEMPORADA (carrusel que avanza) ================= -->
       <section id="temporada">
         <div class="sec-head">
@@ -1331,6 +1497,157 @@
           </div>
         </div>
       </section>
+
+      <!-- ================= PEDIDOS PERSONALIZADOS ================= -->
+      <section id="personalizados">
+        <div class="sec-head">
+          <h2>Pedidos personalizados</h2>
+          <span class="rule"></span>
+        </div>
+        <p class="sec-sub">¿Buscas un perfume que no está en el catálogo o quieres algo a tu medida? Lo conseguimos por ti.</p>
+        <div class="info-card">
+          <h3>Tu perfume, como tú lo quieres</h3>
+          <ul>
+            <li><strong>Perfumes por encargo:</strong> dinos el nombre y la marca del perfume que buscas y te lo conseguimos.</li>
+            <li><strong>Decants a medida:</strong> el perfume que quieras, en el tamaño que necesites para probarlo.</li>
+            <li><strong>Regalos personalizados:</strong> te ayudamos a elegir el perfume ideal para esa persona especial.</li>
+          </ul>
+          <a class="wa-btn" target="_blank" rel="noopener" href="https://wa.me/524777665438?text=Hola%20Barrio%20Parfum%2C%20quiero%20pedir%20un%20perfume%20personalizado%20o%20un%20decant%20a%20medida.%20%C2%BFMe%20puedes%20ayudar%3F">Pedir un perfume personalizado</a>
+        </div>
+      </section>
+
+      <!-- ================= ENVÍOS ================= -->
+      <section id="envios">
+        <div class="sec-head">
+          <h2>Envíos a domicilio a toda la república</h2>
+          <span class="rule"></span>
+        </div>
+        <p class="sec-sub">Llevamos tu perfume a donde estés en México.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>A todo México</h3>
+            <p>Enviamos a toda la república por paquetería. Tu perfume viaja bien protegido para que llegue en perfecto estado, y te compartimos la guía para que lo rastrees en todo momento.</p>
+          </div>
+          <div class="info-card">
+            <h3>Costo y tiempo</h3>
+            <p>El costo y el tiempo de entrega dependen de tu ciudad y se acuerdan por WhatsApp antes de enviarlo. Sin sorpresas: primero lo confirmamos contigo y luego lo mandamos.</p>
+            <a class="wa-btn" target="_blank" rel="noopener" href="https://wa.me/524777665438?text=Hola%20Barrio%20Parfum%2C%20quiero%20un%20env%C3%ADo%20a%20domicilio.%20%C2%BFMe%20puedes%20decir%20el%20costo%20y%20el%20tiempo%20de%20entrega%20a%20mi%20ciudad%3F">Preguntar por mi envío</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ENTREGAS PERSONALES Y ESPECIALES ================= -->
+      <section id="entregas">
+        <div class="sec-head">
+          <h2>Entregas personales y entregas especiales</h2>
+          <span class="rule"></span>
+        </div>
+        <p class="sec-sub">Si estás cerca, te lo entregamos en persona. Y si necesitas algo diferente, también lo preparamos.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Entregas personales</h3>
+            <p>Si estás en Huejotzingo o Puebla, te entregamos tu perfume en persona. Coordinamos el día, la hora y el punto de encuentro por WhatsApp, como más te convenga.</p>
+          </div>
+          <div class="info-card">
+            <h3>Entregas especiales</h3>
+            <p>Regalos con mensaje, pedidos para eventos o varios perfumes a la vez. Cuéntanos qué necesitas por WhatsApp y lo preparamos para ti.</p>
+            <a class="wa-btn" target="_blank" rel="noopener" href="https://wa.me/524777665438?text=Hola%20Barrio%20Parfum%2C%20quiero%20coordinar%20una%20entrega%20en%20persona%20en%20Huejotzingo%20o%20Puebla.">Coordinar mi entrega</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DECANTS Y MUESTRAS ================= -->
+      <section id="decants">
+        <div class="sec-head">
+          <h2>Decants y muestras de 5 ml y 10 ml</h2>
+          <span class="rule"></span>
+        </div>
+        <p class="sec-sub">Prueba antes de comprar el frasco grande.</p>
+        <div class="info-card">
+          <h3>Pruébalo primero, sin arriesgarte</h3>
+          <p>Un decant es una muestra del perfume original en un frasquito pequeño, ideal para probarlo en tu piel unos días antes de decidirte por el frasco grande.</p>
+          <ul>
+            <li><strong>Decant de 5 ml:</strong> para probar un perfume nuevo.</li>
+            <li><strong>Decant de 10 ml:</strong> para usarlo varios días y estar seguro de que te encanta.</li>
+          </ul>
+          <a class="wa-btn" target="_blank" rel="noopener" href="https://wa.me/524777665438?text=Hola%20Barrio%20Parfum%2C%20quiero%20pedir%20un%20decant%20o%20muestra%20de%205%20ml%20o%2010%20ml%20para%20probar%20un%20perfume.%20%C2%BFMe%20dices%20c%C3%B3mo%20pedirlo%3F">Pedir un decant</a>
+        </div>
+      </section>
+
+      <!-- ================= RESEÑAS ================= -->
+      <section id="resenas">
+        <div class="sec-head">
+          <h2>Reseñas de clientes</h2>
+          <span class="rule"></span>
+        </div>
+        <p class="sec-sub">Lo que dicen quienes ya compraron en Barrio Parfum.</p>
+        <div class="reviews-grid" id="reviewsGrid">
+          <article class="review">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <p class="review-text">Me llegó rapidísimo y el perfume huele igualito al original. Ya es mi segunda compra.</p>
+            <p class="review-name">Mariana G.</p>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <p class="review-text">Pedí el Khamrah por WhatsApp y me atendieron súper bien, me explicaron todo.</p>
+            <p class="review-name">Carlos R.</p>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <p class="review-text">El decant me sirvió para probarlo antes de comprar el grande. Muy recomendados.</p>
+            <p class="review-name">Fernanda L.</p>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="4 de 5 estrellas">★★★★☆</div>
+            <p class="review-text">Buen precio y entrega en persona sin problema. Volveré a comprar.</p>
+            <p class="review-name">Diego M.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= PREGUNTAS FRECUENTES ================= -->
+      <section id="faq">
+        <div class="sec-head">
+          <h2>Preguntas frecuentes</h2>
+          <span class="rule"></span>
+        </div>
+        <p class="sec-sub">Si tienes otra duda, escríbenos por WhatsApp y te respondemos.</p>
+        <div class="faq-list">
+          <details>
+            <summary>¿Cómo pido un perfume?</summary>
+            <p>Elige el perfume que te guste, agrégalo al carrito y mándanos el pedido por WhatsApp, o escríbenos directo con el nombre del perfume. Te confirmamos la disponibilidad y el precio por mensaje.</p>
+          </details>
+          <details>
+            <summary>¿Cómo pago?</summary>
+            <p>Puedes pagar por transferencia (SPEI) desde la app de tu banco, o a meses sin intereses con tu tarjeta de crédito vía Mercado Pago. Todo se confirma primero por WhatsApp.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tarda el envío?</summary>
+            <p>Depende de tu ciudad y de la paquetería. El costo y el tiempo de entrega se acuerdan por WhatsApp antes de enviarlo, y te compartimos la guía para rastrear tu paquete.</p>
+          </details>
+          <details>
+            <summary>¿Hacen entregas en persona?</summary>
+            <p>Sí, en Huejotzingo y Puebla te entregamos tu perfume en persona. Coordinamos el día, la hora y el punto de encuentro por WhatsApp.</p>
+          </details>
+          <details>
+            <summary>¿Los perfumes son 100% originales?</summary>
+            <p>Sí. Todos nuestros perfumes son 100% originales y los revisamos antes de entregártelos.</p>
+          </details>
+          <details>
+            <summary>¿Puedo probar un perfume antes de comprar el frasco grande?</summary>
+            <p>Sí, tenemos decants y muestras de 5 ml y 10 ml para que lo pruebes primero. Pídelos por WhatsApp con el nombre del perfume y el tamaño que quieres.</p>
+          </details>
+          <details>
+            <summary>¿Y si no sé qué perfume elegir?</summary>
+            <p>Haz el mini test de esta página (“¿No sabes qué perfume elegir?”) y te recomendamos 3 perfumes, o escríbenos por WhatsApp contándonos qué te gusta y te ayudamos a elegir.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa si mi pedido llega dañado?</summary>
+            <p>Escríbenos por WhatsApp con una foto de cómo llegó y lo resolvemos contigo.</p>
+          </details>
+        </div>
+      </section>
+
     </main>
 
     <footer>
@@ -1350,6 +1667,7 @@
             <span class="brand" id="fichaBrand"></span>
             <h2 id="fichaName"></h2>
             <div class="ficha-tags" id="fichaTags"></div>
+            <p class="ficha-pres"><span id="fichaPres">Presentación: 100 ml</span> · <span id="fichaStock" class="stock-ok">Disponible</span></p>
             <p class="ficha-desc" id="fichaDesc"></p>
             <p class="ficha-uso" id="fichaUso"></p>
             <p class="notas-title">Notas de olor</p>
@@ -1373,6 +1691,10 @@
             <button type="button" class="ficha-add" id="fichaAdd">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
               Añadir al carrito
+            </button>
+            <button type="button" class="ficha-share" id="fichaShare">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98"/><path d="m15.41 6.51-6.82 3.98"/></svg>
+              Compartir
             </button>
             <a class="ficha-wa" id="fichaWa" target="_blank" rel="noopener" href="#">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
@@ -1484,6 +1806,8 @@
           salida: document.getElementById("fichaSalida"),
           corazon: document.getElementById("fichaCorazon"),
           fondo: document.getElementById("fichaFondo"),
+          pres: document.getElementById("fichaPres"),
+          stock: document.getElementById("fichaStock"),
           wa: document.getElementById("fichaWa"),
           close: document.getElementById("fichaClose")
         };
@@ -1513,6 +1837,15 @@
           el.salida.textContent = p.salida;
           el.corazon.textContent = p.corazon;
           el.fondo.textContent = p.fondo;
+          var ml = (p.ml != null && p.ml !== "") ? p.ml : 100;
+          var out = (p.stock != null && p.stock <= 0);
+          if (el.pres) el.pres.textContent = "Presentación: " + ml + " ml";
+          if (el.stock) {
+            el.stock.textContent = out ? "Agotado" : "Disponible";
+            el.stock.className = out ? "stock-out" : "stock-ok";
+          }
+          var addBtn = document.getElementById("fichaAdd");
+          if (addBtn) { addBtn.disabled = out; addBtn.style.opacity = out ? ".45" : ""; }
           el.wa.href = waLink(p);
           lastFocus = document.activeElement;
           backdrop.classList.add("open");
@@ -1561,7 +1894,7 @@
           list.forEach(function (p) {
             var tags = [p.type, p.gender];
             if (p.badge === "Árabe" && tags.indexOf("Árabe") < 0) tags.push("Árabe");
-            PERFUMES[p.id] = { brand: p.brand, name: p.name, tags: tags, desc: p.desc, uso: p.uso, salida: p.salida, corazon: p.corazon, fondo: p.fondo };
+            PERFUMES[p.id] = { brand: p.brand, name: p.name, tags: tags, desc: p.desc, uso: p.uso, salida: p.salida, corazon: p.corazon, fondo: p.fondo, ml: p.ml, stock: p.stock };
           });
           // 2) WhatsApp de la tienda (ficha, carrito y enlaces de la página).
           if (catalog.whatsapp) {
@@ -1896,11 +2229,298 @@
         function apply(c) {
           if (window.__BP_applyCatalog) window.__BP_applyCatalog(c);
           if (window.__BP_bindCartButtons) window.__BP_bindCartButtons();
+          if (window.__BP_bindShareButtons) window.__BP_bindShareButtons();
         }
         fetch("catalogo.json", { cache: "no-store" })
           .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
           .then(function (c) { if (c && c.perfumes && c.perfumes.length) apply(c); })
           .catch(function () { /* respaldo: catálogo fijo */ });
+      })();
+    </script>
+
+    <script>
+      // ---------- Compartir, buscador y filtros, quiz y reseñas ----------
+      // Se alimenta de catalogo.json (lo mismo que sube la app admin). Si el
+      // JSON no carga, el buscador y el quiz usan lo que se ve en las
+      // tarjetas y las reseñas quedan con las 4 de ejemplo de la página.
+      (function () {
+        var SITE_URL = "https://neganboy.github.io/barrio-parfum/";
+        var WA_NUM = "524777665438";
+        var toast = document.getElementById("toast");
+        var toastTimer = null;
+        function bpToast(msg) {
+          if (!toast) return;
+          toast.textContent = msg;
+          toast.classList.add("show");
+          if (toastTimer) clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 2200);
+        }
+
+        // ---------- 10) Compartir ----------
+        function sharePerfume(name, brand) {
+          var text = "Mira este perfume en Barrio Parfum: " + name + " de " + brand;
+          if (navigator.share) {
+            navigator.share({ title: "Barrio Parfum", text: text, url: SITE_URL }).catch(function () {});
+            return;
+          }
+          var full = text + " " + SITE_URL;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(full).then(function () {
+              bpToast("Link copiado, compártelo donde quieras");
+            }, function () {
+              window.open("https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(full), "_blank");
+            });
+          } else {
+            window.open("https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(full), "_blank");
+          }
+        }
+        var SHARE_SVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98"/><path d="m15.41 6.51-6.82 3.98"/></svg>';
+        function bindShareButtons() {
+          document.querySelectorAll(".card[data-perfume]").forEach(function (card) {
+            var old = card.querySelector(".share-btn");
+            if (old) old.remove();
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "share-btn";
+            btn.innerHTML = SHARE_SVG + "<span>Compartir</span>";
+            var brand = card.querySelector(".brand");
+            var nm = card.querySelector(".pname");
+            var b = brand ? brand.textContent : "";
+            var n = nm ? nm.textContent : "";
+            btn.setAttribute("aria-label", "Compartir " + n + " de " + b);
+            if (card.getAttribute("aria-hidden") === "true") btn.tabIndex = -1;
+            btn.addEventListener("click", function (e) {
+              e.stopPropagation();
+              sharePerfume(n, b);
+            });
+            var body = card.querySelector(".card-body");
+            if (body) body.appendChild(btn);
+          });
+        }
+        window.__BP_bindShareButtons = bindShareButtons;
+        bindShareButtons();
+        var fichaShare = document.getElementById("fichaShare");
+        if (fichaShare) {
+          fichaShare.addEventListener("click", function () {
+            var nm = document.getElementById("fichaName");
+            var br = document.getElementById("fichaBrand");
+            sharePerfume(nm ? nm.textContent : "este perfume", br ? br.textContent : "Barrio Parfum");
+          });
+        }
+
+        // ---------- Datos del catálogo ----------
+        var catalog = null;
+        function norm(s) {
+          return (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        }
+        function perfumeList() {
+          if (catalog && catalog.perfumes) {
+            return catalog.perfumes.filter(function (p) { return p.visible !== false; });
+          }
+          var seen = {};
+          var list = [];
+          document.querySelectorAll(".card[data-perfume]").forEach(function (card) {
+            var id = card.getAttribute("data-perfume");
+            if (seen[id]) return;
+            seen[id] = true;
+            var brand = card.querySelector(".brand");
+            var nm = card.querySelector(".pname");
+            var tag = card.querySelector(".meta .tag");
+            list.push({ id: id, brand: brand ? brand.textContent : "", name: nm ? nm.textContent : "", type: tag ? tag.textContent : "", uso: "" });
+          });
+          return list;
+        }
+
+        // ---------- 4) Buscador y filtros ----------
+        var OCC_WORDS = {
+          dia: ["dia", "diario", "calor"],
+          noche: ["noche"],
+          fiesta: ["fiesta", "antro"],
+          trabajo: ["trabajo", "oficina"],
+          cita: ["cita"]
+        };
+        var searchInput = document.getElementById("searchInput");
+        var searchCount = document.getElementById("searchCount");
+        var noResults = document.getElementById("noResults");
+        var typeFilter = "";
+        var occFilter = "";
+        function usoMatchesOcc(uso, occ) {
+          var u = norm(uso);
+          if (!u) return true;
+          var words = OCC_WORDS[occ] || [];
+          for (var i = 0; i < words.length; i++) {
+            if (u.indexOf(norm(words[i])) >= 0) return true;
+          }
+          return false;
+        }
+        function applyFilters() {
+          var q = searchInput ? norm(searchInput.value.trim()) : "";
+          var list = perfumeList();
+          var match = {};
+          var n = 0;
+          list.forEach(function (p) {
+            var ok = true;
+            if (q) {
+              var hay = norm(p.name + " " + p.brand);
+              if (hay.indexOf(q) < 0) ok = false;
+            }
+            if (ok && typeFilter && p.type !== typeFilter) ok = false;
+            if (ok && occFilter && !usoMatchesOcc(p.uso, occFilter)) ok = false;
+            match[p.id] = ok;
+            if (ok) n++;
+          });
+          document.querySelectorAll(".card[data-perfume]").forEach(function (card) {
+            var id = card.getAttribute("data-perfume");
+            card.style.display = (match[id] === false) ? "none" : "";
+          });
+          var filtering = !!(q || typeFilter || occFilter);
+          document.querySelectorAll("main .grid").forEach(function (grid) {
+            var cards = grid.querySelectorAll(".card[data-perfume]");
+            if (!cards.length) return;
+            var anyVisible = false;
+            cards.forEach(function (c) { if (c.style.display !== "none") anyVisible = true; });
+            var empty = filtering && !anyVisible;
+            grid.style.display = empty ? "none" : "";
+            var prev = grid.previousElementSibling;
+            if (prev && prev.classList && prev.classList.contains("group")) prev.style.display = empty ? "none" : "";
+          });
+          document.querySelectorAll("main > section").forEach(function (sec) {
+            var cards = sec.querySelectorAll(".card[data-perfume]");
+            if (!cards.length) return;
+            var anyVisible = false;
+            cards.forEach(function (c) { if (c.style.display !== "none") anyVisible = true; });
+            sec.style.display = (filtering && !anyVisible) ? "none" : "";
+          });
+          if (searchCount) searchCount.textContent = filtering ? (n + (n === 1 ? " perfume encontrado" : " perfumes encontrados")) : "";
+          if (noResults) noResults.style.display = (filtering && n === 0) ? "block" : "none";
+        }
+        if (searchInput) searchInput.addEventListener("input", applyFilters);
+        document.querySelectorAll("[data-filter-type]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            document.querySelectorAll("[data-filter-type]").forEach(function (b) { b.classList.remove("active"); });
+            btn.classList.add("active");
+            typeFilter = btn.getAttribute("data-filter-type") || "";
+            applyFilters();
+          });
+        });
+        document.querySelectorAll("[data-filter-occ]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            document.querySelectorAll("[data-filter-occ]").forEach(function (b) { b.classList.remove("active"); });
+            btn.classList.add("active");
+            occFilter = btn.getAttribute("data-filter-occ") || "";
+            applyFilters();
+          });
+        });
+
+        // ---------- 5) Mini test: ¿qué perfume elegir? ----------
+        var quizSel = { type: "", momento: "", ocasion: "" };
+        document.querySelectorAll(".quiz-opts").forEach(function (box) {
+          box.addEventListener("click", function (e) {
+            var btn = e.target.closest ? e.target.closest("button") : null;
+            if (!btn) return;
+            box.querySelectorAll("button").forEach(function (b) { b.classList.remove("active"); });
+            btn.classList.add("active");
+            quizSel[box.getAttribute("data-quiz")] = btn.getAttribute("data-value") || "";
+          });
+        });
+        function scorePerfume(p) {
+          var s = 0;
+          if (quizSel.type && p.type === quizSel.type) s += 3;
+          var uso = norm(p.uso || "");
+          if (quizSel.momento === "dia" && uso.indexOf("dia") >= 0) s += 2;
+          if (quizSel.momento === "noche" && uso.indexOf("noche") >= 0) s += 2;
+          if (quizSel.ocasion) {
+            var words = OCC_WORDS[quizSel.ocasion] || [];
+            words.forEach(function (w) { if (uso.indexOf(norm(w)) >= 0) s += 2; });
+          }
+          return s;
+        }
+        var quizGo = document.getElementById("quizGo");
+        if (quizGo) {
+          quizGo.addEventListener("click", function () {
+            var results = document.getElementById("quizResults");
+            if (!results) return;
+            var list = perfumeList().slice();
+            list.sort(function (a, b) {
+              var d = scorePerfume(b) - scorePerfume(a);
+              if (d) return d;
+              return ((b.stock > 0) ? 1 : 0) - ((a.stock > 0) ? 1 : 0);
+            });
+            var top = list.slice(0, 3);
+            results.innerHTML = "";
+            var title = document.createElement("p");
+            title.className = "quiz-res-title";
+            title.textContent = "Tus 3 recomendados:";
+            results.appendChild(title);
+            top.forEach(function (p) {
+              var item = document.createElement("div");
+              item.className = "quiz-res";
+              var b = document.createElement("span");
+              b.className = "brand";
+              b.textContent = p.brand;
+              var nm = document.createElement("div");
+              nm.className = "pname";
+              nm.textContent = p.name;
+              var tag = document.createElement("span");
+              tag.className = "tag";
+              tag.textContent = p.type || "";
+              var btn = document.createElement("button");
+              btn.type = "button";
+              btn.className = "quiz-ver";
+              btn.textContent = "Ver detalles";
+              btn.addEventListener("click", function () {
+                var card = document.querySelector(".card[data-perfume=\"" + p.id + "\"]:not([aria-hidden=\"true\"])");
+                if (card) { card.click(); return; }
+                window.open("https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent("Hola Barrio Parfum, me interesa el perfume " + p.name + " de " + p.brand + ". ¿Me puedes dar el precio y la disponibilidad?"), "_blank");
+              });
+              item.appendChild(b);
+              item.appendChild(nm);
+              item.appendChild(tag);
+              item.appendChild(btn);
+              results.appendChild(item);
+            });
+            results.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          });
+        }
+
+        // ---------- 7) Reseñas ----------
+        function renderReviews(list) {
+          var grid = document.getElementById("reviewsGrid");
+          if (!grid || !list || !list.length) return;
+          grid.innerHTML = "";
+          list.forEach(function (r) {
+            var a = document.createElement("article");
+            a.className = "review";
+            var stars = document.createElement("div");
+            stars.className = "stars";
+            var n = Math.max(1, Math.min(5, r.stars || 5));
+            stars.textContent = "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n);
+            stars.setAttribute("aria-label", n + " de 5 estrellas");
+            var t = document.createElement("p");
+            t.className = "review-text";
+            t.textContent = r.text;
+            var nm = document.createElement("p");
+            nm.className = "review-name";
+            nm.textContent = r.name;
+            a.appendChild(stars);
+            a.appendChild(t);
+            a.appendChild(nm);
+            grid.appendChild(a);
+          });
+        }
+
+        // ---------- Cargar catalogo.json ----------
+        fetch("catalogo.json", { cache: "no-store" })
+          .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(function (c) {
+            if (c && c.perfumes && c.perfumes.length) {
+              catalog = c;
+              if (c.reviews && c.reviews.length) renderReviews(c.reviews);
+              bindShareButtons();
+              applyFilters();
+            }
+          })
+          .catch(function () { /* respaldo: catálogo fijo y reseñas estáticas */ });
       })();
     </script>
 </body>
