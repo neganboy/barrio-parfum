@@ -1919,6 +1919,21 @@
           });
         });
 
+        // Enlace profundo ?perfume=<id>: abre la ficha del perfume
+        // compartido al cargar la página. Si el id no existe, no hace
+        // nada y la página carga normal. Se expone para que el script
+        // del catálogo la llame DESPUÉS de aplicar catalogo.json.
+        window.__BP_openPerfume = function (id) {
+          if (!id) return false;
+          var p = PERFUMES[id];
+          if (!p) return false;
+          var card = document.querySelector('.card[data-perfume="' + id + '"]:not([aria-hidden="true"])')
+            || document.querySelector('.card[data-perfume="' + id + '"]');
+          var img = card ? card.querySelector("img") : null;
+          openFicha(p, img ? img.getAttribute("src") : "", id);
+          return true;
+        };
+
         // ---------- Catálogo desde catalogo.json (lo que sube la app admin) ----------
         // window.__BP_applyCatalog(data) reconstruye las secciones con los datos
         // del JSON y actualiza la ficha. Si el JSON no carga, no se llama y la
@@ -2266,6 +2281,14 @@
       // Si no carga (sin internet o archivo ausente), la página se queda con su
       // catálogo fijo, así nunca queda en blanco.
       (function () {
+        // Si la URL trae ?perfume=<id>, abre su ficha. Se llama después
+        // de aplicar catalogo.json (o con el catálogo fijo si el JSON
+        // no carga), para que el perfume ya exista en PERFUMES.
+        function openSharedPerfume() {
+          var id = null;
+          try { id = new URLSearchParams(window.location.search).get("perfume"); } catch (e) { id = null; }
+          if (id && window.__BP_openPerfume) window.__BP_openPerfume(id);
+        }
         function apply(c) {
           if (window.__BP_applyCatalog) window.__BP_applyCatalog(c);
           if (window.__BP_bindCartButtons) window.__BP_bindCartButtons();
@@ -2273,8 +2296,8 @@
         }
         fetch("catalogo.json", { cache: "no-store" })
           .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-          .then(function (c) { if (c && c.perfumes && c.perfumes.length) apply(c); })
-          .catch(function () { /* respaldo: catálogo fijo */ });
+          .then(function (c) { if (c && c.perfumes && c.perfumes.length) apply(c); openSharedPerfume(); })
+          .catch(function () { openSharedPerfume(); /* respaldo: catálogo fijo */ });
       })();
     </script>
 
@@ -2297,13 +2320,14 @@
         }
 
         // ---------- 10) Compartir ----------
-        function sharePerfume(name, brand) {
+        function sharePerfume(name, brand, id) {
+          var url = id ? SITE_URL + "?perfume=" + encodeURIComponent(id) : SITE_URL;
           var text = "Mira este perfume en Barrio Parfum: " + name + " de " + brand;
           if (navigator.share) {
-            navigator.share({ title: "Barrio Parfum", text: text, url: SITE_URL }).catch(function () {});
+            navigator.share({ title: "Barrio Parfum", text: text, url: url }).catch(function () {});
             return;
           }
-          var full = text + " " + SITE_URL;
+          var full = text + " " + url;
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(full).then(function () {
               bpToast("Link copiado, compártelo donde quieras");
@@ -2331,7 +2355,7 @@
             if (card.getAttribute("aria-hidden") === "true") btn.tabIndex = -1;
             btn.addEventListener("click", function (e) {
               e.stopPropagation();
-              sharePerfume(n, b);
+              sharePerfume(n, b, card.getAttribute("data-perfume"));
             });
             var body = card.querySelector(".card-body");
             if (body) body.appendChild(btn);
@@ -2344,7 +2368,8 @@
           fichaShare.addEventListener("click", function () {
             var nm = document.getElementById("fichaName");
             var br = document.getElementById("fichaBrand");
-            sharePerfume(nm ? nm.textContent : "este perfume", br ? br.textContent : "Barrio Parfum");
+            var bd = document.getElementById("fichaBackdrop");
+            sharePerfume(nm ? nm.textContent : "este perfume", br ? br.textContent : "Barrio Parfum", bd ? bd.getAttribute("data-current") : "");
           });
         }
 
