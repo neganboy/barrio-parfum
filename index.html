@@ -595,6 +595,33 @@
       .quiz-ver { margin-left: auto; font-family: var(--sans); font-size: 13.5px; font-weight: 600; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--olive); background: #fff; color: var(--olive-deep); cursor: pointer; }
       .quiz-ver:hover { background: var(--olive); color: #fff; }
 
+      /* ---------- Quiz: tarjeta compacta + ventana emergente ---------- */
+      .quiz-card { width: 100%; display: flex; align-items: center; gap: 16px; text-align: left; background: #fff; border: 1px solid var(--line); padding: 18px 20px; cursor: pointer; font-family: var(--sans); }
+      .quiz-card:hover { border-color: var(--olive); background: var(--olive-wash); }
+      .quiz-card-text { flex: 1; min-width: 0; display: grid; gap: 2px; }
+      .quiz-card-text strong { font-family: var(--serif); font-size: 21px; font-weight: 600; }
+      .quiz-card-text span { font-size: 14.5px; color: var(--muted); line-height: 1.45; }
+      .quiz-card-btn { flex: none; background: var(--olive); color: #fff; font-family: var(--sans); font-size: 14px; font-weight: 600; padding: 11px 18px; border-radius: 999px; white-space: nowrap; }
+      .quiz-backdrop { position: fixed; inset: 0; z-index: 90; background: rgba(29, 29, 26, .55); display: none; align-items: flex-end; justify-content: center; }
+      .quiz-backdrop.open { display: flex; }
+      .quiz-modal { background: #fff; width: 100%; max-width: 640px; max-height: 92vh; max-height: 92dvh; overflow-y: auto; border-radius: 18px 18px 0 0; padding: 8px 22px 28px; animation: ficha-up .28s ease; }
+      .quiz-modal h2 { font-family: var(--serif); font-size: clamp(26px, 5vw, 32px); font-weight: 600; margin: 6px 0 4px; }
+      .quiz-modal .sec-sub { margin: 0 0 18px; }
+      .quiz-modal .quiz-box { border: none; padding: 0; }
+      .quiz-close { display: flex; justify-content: flex-end; padding: 12px 0 0; }
+      .quiz-close button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 20px; line-height: 1; cursor: pointer; color: var(--ink); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+      .quiz-close button:hover { background: var(--olive-wash); border-color: var(--olive); }
+      body.quiz-open { overflow: hidden; }
+      @media (min-width: 721px) {
+        .quiz-backdrop { align-items: center; padding: 24px; }
+        .quiz-modal { border-radius: 18px; padding: 8px 30px 32px; }
+      }
+      @media (max-width: 720px) {
+        .quiz-card { padding: 16px; gap: 12px; }
+        .quiz-card-text strong { font-size: 19px; }
+        .quiz-card-btn { padding: 10px 14px; font-size: 13.5px; }
+      }
+
       /* ---------- Secciones informativas ---------- */
       .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
       .info-card { border: 1px solid var(--line); padding: 26px 26px 24px; background: #fff; }
@@ -719,43 +746,15 @@
         </div>
       </section>
 
-      <!-- ================= QUIZ: ¿QUÉ PERFUME ELEGIR? ================= -->
+      <!-- ================= QUIZ: TARJETA COMPACTA (se abre en ventana) ================= -->
       <section id="quiz">
-        <div class="sec-head">
-          <h2>¿No sabes qué perfume elegir?</h2>
-          <span class="rule"></span>
-        </div>
-        <p class="sec-sub">Contesta 3 preguntas rápidas y te recomendamos 3 perfumes de nuestro catálogo.</p>
-        <div class="quiz-box">
-          <div class="quiz-q">
-            <p class="quiz-qtitle">1. ¿Te gustan más los dulces o los frescos?</p>
-            <div class="quiz-opts" data-quiz="type">
-              <button type="button" data-value="Dulce">Dulces</button>
-              <button type="button" data-value="Fresco">Frescos</button>
-              <button type="button" data-value="">Me da igual</button>
-            </div>
-          </div>
-          <div class="quiz-q">
-            <p class="quiz-qtitle">2. ¿Lo quieres para el día o para la noche?</p>
-            <div class="quiz-opts" data-quiz="momento">
-              <button type="button" data-value="dia">Para el día</button>
-              <button type="button" data-value="noche">Para la noche</button>
-              <button type="button" data-value="">Me da igual</button>
-            </div>
-          </div>
-          <div class="quiz-q">
-            <p class="quiz-qtitle">3. ¿Para qué ocasión lo quieres?</p>
-            <div class="quiz-opts" data-quiz="ocasion">
-              <button type="button" data-value="fiesta">Fiesta</button>
-              <button type="button" data-value="trabajo">Trabajo</button>
-              <button type="button" data-value="cita">Cita</button>
-              <button type="button" data-value="dia">Para diario</button>
-              <button type="button" data-value="">Me da igual</button>
-            </div>
-          </div>
-          <button type="button" class="quiz-go" id="quizGo">Ver mis recomendaciones</button>
-          <div class="quiz-results" id="quizResults" aria-live="polite"></div>
-        </div>
+        <button type="button" class="quiz-card" id="quizOpen" aria-haspopup="dialog" aria-controls="quizBackdrop">
+          <span class="quiz-card-text">
+            <strong>¿No sabes qué perfume elegir?</strong>
+            <span>Te ayudamos con 3 preguntas rápidas.</span>
+          </span>
+          <span class="quiz-card-btn">Ayúdame a elegir</span>
+        </button>
       </section>
 
       <!-- ================= TEMPORADA (carrusel que avanza) ================= -->
@@ -1706,6 +1705,47 @@
       </div>
     </div>
 
+    <!-- ================= QUIZ EN VENTANA EMERGENTE ================= -->
+    <div class="quiz-backdrop" id="quizBackdrop" aria-hidden="true">
+      <div class="quiz-modal" role="dialog" aria-modal="true" aria-labelledby="quizModalTitle">
+        <div class="quiz-close">
+          <button type="button" id="quizClose" aria-label="Cerrar test">✕</button>
+        </div>
+        <h2 id="quizModalTitle">¿No sabes qué perfume elegir?</h2>
+        <p class="sec-sub">Contesta 3 preguntas rápidas y te recomendamos 3 perfumes de nuestro catálogo.</p>
+        <div class="quiz-box">
+          <div class="quiz-q">
+            <p class="quiz-qtitle">1. ¿Te gustan más los dulces o los frescos?</p>
+            <div class="quiz-opts" data-quiz="type">
+              <button type="button" data-value="Dulce">Dulces</button>
+              <button type="button" data-value="Fresco">Frescos</button>
+              <button type="button" data-value="">Me da igual</button>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p class="quiz-qtitle">2. ¿Lo quieres para el día o para la noche?</p>
+            <div class="quiz-opts" data-quiz="momento">
+              <button type="button" data-value="dia">Para el día</button>
+              <button type="button" data-value="noche">Para la noche</button>
+              <button type="button" data-value="">Me da igual</button>
+            </div>
+          </div>
+          <div class="quiz-q">
+            <p class="quiz-qtitle">3. ¿Para qué ocasión lo quieres?</p>
+            <div class="quiz-opts" data-quiz="ocasion">
+              <button type="button" data-value="fiesta">Fiesta</button>
+              <button type="button" data-value="trabajo">Trabajo</button>
+              <button type="button" data-value="cita">Cita</button>
+              <button type="button" data-value="dia">Para diario</button>
+              <button type="button" data-value="">Me da igual</button>
+            </div>
+          </div>
+          <button type="button" class="quiz-go" id="quizGo">Ver mis recomendaciones</button>
+          <div class="quiz-results" id="quizResults" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- ================= CARRITO ================= -->
     <div class="cart-backdrop" id="cartBackdrop">
       <div class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
@@ -2412,6 +2452,29 @@
           });
         });
 
+        // ---------- 5a) Quiz: abrir/cerrar la ventana emergente ----------
+        var quizBackdrop = document.getElementById("quizBackdrop");
+        function openQuiz() {
+          if (!quizBackdrop) return;
+          quizBackdrop.classList.add("open");
+          quizBackdrop.setAttribute("aria-hidden", "false");
+          document.body.classList.add("quiz-open");
+        }
+        function closeQuiz() {
+          if (!quizBackdrop) return;
+          quizBackdrop.classList.remove("open");
+          quizBackdrop.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("quiz-open");
+        }
+        var quizOpenBtn = document.getElementById("quizOpen");
+        if (quizOpenBtn) quizOpenBtn.addEventListener("click", openQuiz);
+        var quizCloseBtn = document.getElementById("quizClose");
+        if (quizCloseBtn) quizCloseBtn.addEventListener("click", closeQuiz);
+        if (quizBackdrop) quizBackdrop.addEventListener("click", function (e) { if (e.target === quizBackdrop) closeQuiz(); });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && quizBackdrop && quizBackdrop.classList.contains("open")) closeQuiz();
+        });
+
         // ---------- 5) Mini test: ¿qué perfume elegir? ----------
         var quizSel = { type: "", momento: "", ocasion: "" };
         document.querySelectorAll(".quiz-opts").forEach(function (box) {
@@ -2470,7 +2533,7 @@
               btn.textContent = "Ver detalles";
               btn.addEventListener("click", function () {
                 var card = document.querySelector(".card[data-perfume=\"" + p.id + "\"]:not([aria-hidden=\"true\"])");
-                if (card) { card.click(); return; }
+                if (card) { closeQuiz(); card.click(); return; }
                 window.open("https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent("Hola Barrio Parfum, me interesa el perfume " + p.name + " de " + p.brand + ". ¿Me puedes dar el precio y la disponibilidad?"), "_blank");
               });
               item.appendChild(b);
